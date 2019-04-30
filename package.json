@@ -1,0 +1,25 @@
+{
+  "name": "nc-project-backend",
+  "version": "1.0.0",
+  "description": "Backend for the NorthCoders final project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jakub-L/nc-project-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jakub-L/nc-project-backend/issues"
+  },
+  "homepage": "https://github.com/Jakub-L/nc-project-backend#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2"
+  }
+}
