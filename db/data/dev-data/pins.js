@@ -8,7 +8,7 @@ module.exports = [
     altitude: 44,
     photo_url:
       'https://www.iter.org/img/resize-2000-75/all/content/com/gallery/construction/tkmcomplex/snc_iter-from-above_april-2018-32.jpg',
-    note: 'test pin 1'
+    note: 'test pin 1',
   },
   {
     pin_id: 2,
@@ -19,7 +19,7 @@ module.exports = [
     altitude: 44,
     photo_url:
       'https://ichef.bbci.co.uk/news/660/cpsprodpb/160F8/production/_104106309_sellafield.jpg',
-    note: 'test pin 2'
+    note: 'test pin 2',
   },
   {
     pin_id: 3,
@@ -30,7 +30,7 @@ module.exports = [
     altitude: 44,
     photo_url:
       'https://previews.123rf.com/images/arskabb/arskabb1202/arskabb120200009/12507832-railway-construction-site-in-vuosaari-finland.jpg',
-    note: 'test pin 3'
+    note: 'test pin 3',
   },
   {
     pin_id: 4,
@@ -40,6 +40,6 @@ module.exports = [
     longitude: -1.5470454,
     altitude: 44,
     photo_url: 'https://images.wisegeek.com/blue-pipe-with-blind-flange.jpg',
-    note: 'test pin 4'
-  }
+    note: 'test pin 4',
+  },
 ];

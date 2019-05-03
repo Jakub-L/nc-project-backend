@@ -7,7 +7,7 @@ const production = require('./dev-data');
 const data = {
   development,
   test,
-  production
+  production,
 };
 
 module.exports = data[ENV];
