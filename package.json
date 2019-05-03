@@ -21,5 +21,17 @@
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.2"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-sorted": "^0.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "heroku": "^7.24.1",
+    "knex": "^0.16.5",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.0",
+    "pg": "^7.10.0",
+    "supertest": "^4.0.2"
   }
 }
