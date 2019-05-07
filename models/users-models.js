@@ -11,7 +11,12 @@ function selectAllUsers(queryObj) {
   });
 
   return connection
-    .select('users.name AS name', 'users.email AS contact')
+    .select(
+      'users.user_id AS user_id',
+      'users.username AS username',
+      'users.name AS name',
+      'users.email AS contact',
+    )
     .from('users')
     .where(queryObj)
     .orderBy(sortObj.sort_by, sortObj.order);
@@ -23,7 +28,12 @@ function selectUser(paramObj) {
     delete paramObj[prop];
   })
   return connection
-    .select('users.name AS name', 'users.email AS contact')
+    .select(
+      'users.user_id AS user_id',
+      'users.username AS username',
+      'users.name AS name',
+      'users.email AS contact',
+    )
     .from('users')
     .where(paramObj);
 }
