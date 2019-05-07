@@ -11,7 +11,7 @@ function selectAllPins(queryObj) {
   });
 
   let rawCondition = '0 = 0';
-  for (prop in queryObj) {
+  for (let prop in queryObj) {
     if (prop === 'creator') {
       queryObj['users.name'] = queryObj[prop];
       delete queryObj[prop];
@@ -54,7 +54,7 @@ function selectAllPins(queryObj) {
 }
 
 function selectPin(paramObj) {
-  for (prop in paramObj) {
+  for (let prop in paramObj) {
     paramObj[`pins.${prop}`] = paramObj[prop];
     delete paramObj[prop];
   }

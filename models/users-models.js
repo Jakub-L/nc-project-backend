@@ -18,7 +18,7 @@ function selectAllUsers(queryObj) {
 }
 
 function selectUser(paramObj) {
-  for (prop in paramObj) {
+  for (let prop in paramObj) {
     paramObj[`users.${prop}`] = paramObj[prop];
     delete paramObj[prop];
   }
@@ -32,7 +32,7 @@ function addUser(params, userReqBody) {
   const user = {
     username: userReqBody.username,
     name: userReqBody.name,
-    email: userReqBody.email,
+    email: userReqBody.email
   };
   return connection
     .insert(user)
@@ -58,5 +58,5 @@ module.exports = {
   selectUser,
   addUser,
   modifyUser,
-  removeUser,
+  removeUser
 };
