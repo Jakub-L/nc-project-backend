@@ -8,6 +8,8 @@ const {
 
 function getAllPins(req, res, next) {
   const acceptQueries = [
+    'sort_by',
+    'order',
     'user_id',
     'site_id',
     'min_date',
