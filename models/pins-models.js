@@ -45,7 +45,7 @@ function selectAllPins(queryObj) {
       'users.name AS creator',
       'users.email AS contact',
       'users.user_photo AS user_photo',
-      'sites.name AS site',
+      'sites.site_name AS site_name',
     )
     .from('pins')
     .leftJoin('users', 'pins.user_id', '=', 'users.user_id')
@@ -71,7 +71,7 @@ function selectPin(paramObj) {
       'pins.altitude AS altitude',
       'users.name AS creator',
       'users.email AS contact',
-      'sites.name AS site'
+      'sites.site_name AS site_name',
     )
     .from('pins')
     .leftJoin('users', 'pins.user_id', '=', 'users.user_id')

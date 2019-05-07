@@ -11,7 +11,7 @@ function getAllSites(req, res, next) {
     'sort_by',
     'order',
     'site_id',
-    'name',
+    'site_name',
     'min_latitude',
     'max_latitude',
     'min_longitude',
