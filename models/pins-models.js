@@ -79,7 +79,7 @@ function selectPin(paramObj) {
     .where(paramObj);
 }
 
-function addPin(params, pinReqBody) {
+function addPin(pinReqBody) {
   console.log(pinReqBody)
   const pin = {
     user_id: pinReqBody.user_id,
