@@ -1,7 +1,7 @@
 const connection = require('../db/connection');
 
 function selectAllSites(queryObj) {
-  const sortObj = { sort_by: 'sites.name', order: 'asc' };
+  const sortObj = { sort_by: 'sites.site_name', order: 'asc' };
   const sortProps = ['sort_by', 'order'];
   sortProps.forEach(sortProp => {
     if (queryObj.hasOwnProperty(sortProp)) {
@@ -11,7 +11,7 @@ function selectAllSites(queryObj) {
   });
 
   let rawCondition = '0 = 0';
-  for (let prop in queryObj) {
+  Object.keys(queryObj).forEach(prop => {
     if (/^max_/.test(prop)) {
       rawCondition = `${rawCondition} AND sites.${prop.replace(
         /^max_/,
@@ -25,7 +25,7 @@ function selectAllSites(queryObj) {
       )}_min >= ${queryObj[prop]}`;
       delete queryObj[prop];
     }
-  }
+  })
 
   return connection
     .select(
@@ -36,7 +36,7 @@ function selectAllSites(queryObj) {
       'sites.altitude_min AS altitude_min',
       'sites.latitude_max AS latitude_max',
       'sites.longitude_max AS longitude_max',
-      'sites.altitude_max AS altitude_max'
+      'sites.altitude_max AS altitude_max',
     )
     .count('pins.pin_id AS pin_count', 'users.user_id AS user_count')
     .from('sites')

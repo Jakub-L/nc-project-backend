@@ -11,7 +11,7 @@ function selectAllPins(queryObj) {
   });
 
   let rawCondition = '0 = 0';
-  for (let prop in queryObj) {
+  Object.keys(queryObj).forEach(prop => {
     if (prop === 'creator') {
       queryObj['users.name'] = queryObj[prop];
       delete queryObj[prop];
@@ -30,8 +30,8 @@ function selectAllPins(queryObj) {
         ''
       )} >= ${queryObj[prop]}`;
       delete queryObj[prop];
-    }
-  }
+    };
+  });
 
   return connection
     .select(
@@ -59,7 +59,7 @@ function selectPin(paramObj) {
   Object.keys(paramObj).forEach(prop => {
     paramObj[`pins.${prop}`] = paramObj[prop];
     delete paramObj[prop];
-  })
+  });
   return connection
     .select(
       'pins.pin_id AS pin_id',
