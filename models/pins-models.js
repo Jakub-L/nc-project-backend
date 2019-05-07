@@ -54,10 +54,10 @@ function selectAllPins(queryObj) {
 }
 
 function selectPin(paramObj) {
-  for (let prop in paramObj) {
+  Object.keys(paramObj).forEach(prop => {
     paramObj[`pins.${prop}`] = paramObj[prop];
     delete paramObj[prop];
-  }
+  })
   return connection
     .select(
       'pins.photo_url AS url',

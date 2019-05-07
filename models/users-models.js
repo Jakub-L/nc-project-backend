@@ -18,10 +18,10 @@ function selectAllUsers(queryObj) {
 }
 
 function selectUser(paramObj) {
-  for (let prop in paramObj) {
+  Object.keys(paramObj).forEach(prop => {
     paramObj[`users.${prop}`] = paramObj[prop];
     delete paramObj[prop];
-  }
+  })
   return connection
     .select('users.name AS name', 'users.email AS contact')
     .from('users')
@@ -58,5 +58,5 @@ module.exports = {
   selectUser,
   addUser,
   modifyUser,
-  removeUser
+  removeUser,
 };
