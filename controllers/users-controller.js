@@ -3,14 +3,11 @@ const {
   selectUser,
   addUser,
   modifyUser,
-  removeUser,
+  removeUser
 } = require('../models/users-models');
 
 function getAllUsers(req, res, next) {
-  const acceptQueries = [
-    'sort_by',
-    'order',
-  ];
+  const acceptQueries = ['sort_by', 'order'];
   if (req.query.every(query => acceptQueries.includes(query))) {
     selectAllUsers(req.query).then(users => {
       res.status(200).json({ users });
@@ -18,6 +15,7 @@ function getAllUsers(req, res, next) {
   } else {
     next({ status: 400 });
   }
+}
 
 function getUser(req, res, next) {
   selectUser(req.params).then(users => {
@@ -70,5 +68,5 @@ module.exports = {
   getUser,
   postUser,
   patchUser,
-  deleteUser,
+  deleteUser
 };
