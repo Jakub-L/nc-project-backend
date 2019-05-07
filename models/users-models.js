@@ -15,7 +15,7 @@ function selectAllUsers(queryObj) {
       'users.user_id AS user_id',
       'users.username AS username',
       'users.name AS name',
-      'users.email AS contact',
+      'users.email AS email',
       'users.user_photo AS user_photo',
     )
     .from('users')
@@ -33,7 +33,7 @@ function selectUser(paramObj) {
       'users.user_id AS user_id',
       'users.username AS username',
       'users.name AS name',
-      'users.email AS contact',
+      'users.email AS email',
       'users.user_photo AS user_photo',
     )
     .from('users')

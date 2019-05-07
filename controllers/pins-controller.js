@@ -11,6 +11,7 @@ function getAllPins(req, res, next) {
     'sort_by',
     'order',
     'creator', // users.name
+    'email', // users.email
     'site_name', // sites.site_name
     'min_date',
     'max_date',

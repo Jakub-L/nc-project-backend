@@ -10,7 +10,6 @@ function getAllSites(req, res, next) {
   const acceptQueries = [
     'sort_by',
     'order',
-    'site_id',
     'site_name',
     'min_latitude',
     'max_latitude',
