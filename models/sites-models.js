@@ -48,10 +48,10 @@ function selectAllSites(queryObj) {
 }
 
 function selectSite(paramObj) {
-  for (let prop in paramObj) {
+  Object.keys(paramObj).forEach(prop => {
     paramObj[`pins.${prop}`] = paramObj[prop];
     delete paramObj[prop];
-  }
+  })
   return connection
     .select(
       'sites.name AS site',
@@ -78,7 +78,7 @@ function addSite(params, siteReqBody) {
     altitude_min: siteReqBody.altitude_min,
     latitude_max: siteReqBody.latitude_max,
     longitude_max: siteReqBody.longitude_max,
-    altitude_max: siteReqBody.altitude_max
+    altitude_max: siteReqBody.altitude_max,
   };
   return connection
     .insert(site)
@@ -104,5 +104,5 @@ module.exports = {
   selectSite,
   addSite,
   modifySite,
-  removeSite
+  removeSite,
 };
