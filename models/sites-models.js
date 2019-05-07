@@ -16,13 +16,13 @@ function selectAllSites(queryObj) {
       rawCondition = `${rawCondition} AND sites.${prop.replace(
         /^max_/,
         ''
-      )} <= ${queryObj[prop]}`;
+      )}_max <= ${queryObj[prop]}`;
       delete queryObj[prop];
     } else if (/^min_/.test(prop)) {
       rawCondition = `${rawCondition} AND sites.${prop.replace(
         /^min_/,
         ''
-      )} >= ${queryObj[prop]}`;
+      )}_min >= ${queryObj[prop]}`;
       delete queryObj[prop];
     }
   }
@@ -30,7 +30,7 @@ function selectAllSites(queryObj) {
   return connection
     .select(
       'sites.site_id AS site_id',
-      'sites.name AS site',
+      'sites.site_name AS site_name',
       'sites.latitude_min AS latitude_min',
       'sites.longitude_min AS longitude_min',
       'sites.altitude_min AS altitude_min',
@@ -56,7 +56,7 @@ function selectSite(paramObj) {
   return connection
     .select(
       'sites.site_id AS site_id',
-      'sites.name AS site',
+      'sites.site_name AS site_name',
       'sites.latitude_min AS latitude_min',
       'sites.longitude_min AS longitude_min',
       'sites.altitude_min AS altitude_min',

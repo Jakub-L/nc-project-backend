@@ -3,11 +3,16 @@ const {
   selectUser,
   addUser,
   modifyUser,
-  removeUser
+  removeUser,
 } = require('../models/users-models');
 
 function getAllUsers(req, res, next) {
-  const acceptQueries = ['sort_by', 'order'];
+  const acceptQueries = [
+    'sort_by',
+    'order',
+    'name',
+    'contact',
+  ];
   if (Object.keys(req.query).every(query => acceptQueries.includes(query))) {
     selectAllUsers(req.query).then(users => {
       res.status(200).json({ users });
