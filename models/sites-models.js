@@ -1,7 +1,7 @@
 const connection = require('../db/connection');
 
 function selectAllSites(queryObj) {
-  const sortObj = { sort_by: 'name', order: 'asc' };
+  const sortObj = { sort_by: 'sites.name', order: 'asc' };
   const sortProps = ['sort_by', 'order'];
   sortProps.forEach(sortProp => {
     if (queryObj.hasOwnProperty(sortProp)) {
