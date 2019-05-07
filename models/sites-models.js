@@ -29,6 +29,7 @@ function selectAllSites(queryObj) {
 
   return connection
     .select(
+      'sites.site_id AS site_id',
       'sites.name AS site',
       'sites.latitude_min AS latitude_min',
       'sites.longitude_min AS longitude_min',
@@ -54,6 +55,7 @@ function selectSite(paramObj) {
   })
   return connection
     .select(
+      'sites.site_id AS site_id',
       'sites.name AS site',
       'sites.latitude_min AS latitude_min',
       'sites.longitude_min AS longitude_min',
