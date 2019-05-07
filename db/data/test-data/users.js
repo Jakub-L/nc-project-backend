@@ -1,18 +1,18 @@
 module.exports = [
   {
     username: 'Ben',
-    name: 'Ben'
+    name: 'Ben',
   },
   {
     username: 'Fraser',
-    name: 'Fraser'
+    name: 'Fraser',
   },
   {
     username: 'Jakub',
-    name: 'Jakub'
+    name: 'Jakub',
   },
   {
     username: 'Richard',
-    name: 'Richard'
-  }
+    name: 'Richard',
+  },
 ];
