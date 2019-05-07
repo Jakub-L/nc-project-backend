@@ -3,7 +3,7 @@ const {
   selectPin,
   addPin,
   modifyPin,
-  removePin,
+  removePin
 } = require('../models/pins-models');
 
 function getAllPins(req, res, next) {
@@ -21,7 +21,7 @@ function getAllPins(req, res, next) {
     'min_altitude',
     'max_altitude'
   ];
-  if (req.query.every(query => acceptQueries.includes(query))) {
+  if (Object.keys(req.query).every(query => acceptQueries.includes(query))) {
     selectAllPins(req.query).then(pins => {
       res.status(200).json({ pins });
     });
@@ -81,5 +81,5 @@ module.exports = {
   getPin,
   postPin,
   patchPin,
-  deletePin,
+  deletePin
 };

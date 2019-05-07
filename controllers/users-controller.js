@@ -8,7 +8,7 @@ const {
 
 function getAllUsers(req, res, next) {
   const acceptQueries = ['sort_by', 'order'];
-  if (req.query.every(query => acceptQueries.includes(query))) {
+  if (Object.keys(req.query).every(query => acceptQueries.includes(query))) {
     selectAllUsers(req.query).then(users => {
       res.status(200).json({ users });
     });
