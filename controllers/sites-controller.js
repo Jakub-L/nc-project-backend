@@ -8,6 +8,8 @@ const {
 
 function getAllSites(req, res, next) {
   const acceptQueries = [
+    'sort_by',
+    'order',
     'site_id',
     'name',
     'min_latitude',
@@ -15,7 +17,7 @@ function getAllSites(req, res, next) {
     'min_longitude',
     'max_longitude',
     'min_altitude',
-    'max_altitude',
+    'max_altitude'
   ];
   if (req.query.every(query => acceptQueries.includes(query))) {
     selectAllSites(req.query).then(sites => {

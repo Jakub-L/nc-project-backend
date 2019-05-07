@@ -7,10 +7,17 @@ const {
 } = require('../models/users-models');
 
 function getAllUsers(req, res, next) {
-  selectAllUsers().then(users => {
+  const acceptQueries = [
+    'sort_by',
+    'order',
+  ];
+  if (req.query.every(query => acceptQueries.includes(query))) {
+    selectAllUsers(req.query).then(users => {
       res.status(200).json({ users });
-  });
-}
+    });
+  } else {
+    next({ status: 400 });
+  }
 
 function getUser(req, res, next) {
   selectUser(req.params).then(users => {
