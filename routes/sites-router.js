@@ -11,12 +11,12 @@ const {
 sitesRouter
   .route('/')
   .get(getAllSites)
+  .post(postSite)
   .all(methodNotAllowed);
 
 sitesRouter
   .route('/:site_id')
   .get(getSite)
-  .post(postSite)
   .patch(patchSite)
   .delete(deleteSite)
   .all(methodNotAllowed);

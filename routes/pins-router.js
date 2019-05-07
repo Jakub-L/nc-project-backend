@@ -11,12 +11,12 @@ const {
 pinsRouter
   .route('/')
   .get(getAllPins)
+  .post(postPin)
   .all(methodNotAllowed);
 
 pinsRouter
   .route('/:pin_id')
   .get(getPin)
-  .post(postPin)
   .patch(patchPin)
   .delete(deletePin)
   .all(methodNotAllowed);
