@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
     userTable.string('username');
     userTable.string('name');
     userTable.string('email');
+    userTable.string('user_photo', 1000);
   });
 };
 
