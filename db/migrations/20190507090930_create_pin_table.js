@@ -13,7 +13,7 @@ exports.up = function (knex, Promise) {
     pinTable.decimal('latitude', null);
     pinTable.decimal('longitude', null);
     pinTable.decimal('altitude', null);
-    pinTable.string('photo_url', 1000);
+    pinTable.string('photo_url', 1000).defaultTo('https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_user-circle-512.png');
     pinTable.text('note');
   });
 };
