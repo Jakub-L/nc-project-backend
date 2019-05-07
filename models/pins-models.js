@@ -36,7 +36,7 @@ function selectAllPins(queryObj) {
   return connection
     .select(
       'pins.pin_id AS pin_id',
-      'pins.photo_url AS url',
+      'pins.photo_url AS photo_url',
       'pins.note AS note',
       'pins.timestamp AS timestamp',
       'pins.latitude AS latitude',
@@ -44,7 +44,8 @@ function selectAllPins(queryObj) {
       'pins.altitude AS altitude',
       'users.name AS creator',
       'users.email AS contact',
-      'sites.name AS site'
+      'users.user_photo AS user_photo',
+      'sites.name AS site',
     )
     .from('pins')
     .leftJoin('users', 'pins.user_id', '=', 'users.user_id')
