@@ -40,7 +40,7 @@ function selectUser(paramObj) {
     .where(paramObj);
 }
 
-function addUser(params, userReqBody) {
+function addUser(userReqBody) {
   const user = {
     username: userReqBody.username,
     name: userReqBody.name,
