@@ -10,8 +10,8 @@ function getAllPins(req, res, next) {
   const acceptQueries = [
     'sort_by',
     'order',
-    'user_id',
-    'site_id',
+    'creator', // users.name
+    'site', // sites.name
     'min_date',
     'max_date',
     'min_latitude',
