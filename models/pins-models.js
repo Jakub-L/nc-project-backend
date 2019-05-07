@@ -80,6 +80,7 @@ function selectPin(paramObj) {
 }
 
 function addPin(pinReqBody) {
+  console.log(pinReqBody)
   const pin = {
     user_id: pinReqBody.user_id,
     site_id: pinReqBody.site_id,
