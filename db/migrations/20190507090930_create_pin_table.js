@@ -9,6 +9,7 @@ exports.up = function(knex, Promise) {
       .integer('site_id')
       .references('sites.site_id')
       .onDelete('CASCADE');
+    pinTable.timestamp('timestamp').defaultTo(knex.fn.now());
     pinTable.float('latitude', null);
     pinTable.float('longitude', null);
     pinTable.float('altitude', null);
