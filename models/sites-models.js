@@ -72,7 +72,7 @@ function selectSite(paramObj) {
     .where(paramObj);
 }
 
-function addSite(params, siteReqBody) {
+function addSite(siteReqBody) {
   const site = {
     name: siteReqBody.name,
     latitude_min: siteReqBody.latitude_min,
