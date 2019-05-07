@@ -43,7 +43,7 @@ function selectAllPins(queryObj) {
       'pins.longitude AS longitude',
       'pins.altitude AS altitude',
       'users.name AS creator',
-      'users.email AS contact',
+      'users.email AS email',
       'users.user_photo AS user_photo',
       'sites.site_name AS site_name',
     )
@@ -70,7 +70,7 @@ function selectPin(paramObj) {
       'pins.longitude AS longitude',
       'pins.altitude AS altitude',
       'users.name AS creator',
-      'users.email AS contact',
+      'users.email AS email',
       'sites.site_name AS site_name',
     )
     .from('pins')

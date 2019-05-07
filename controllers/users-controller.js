@@ -10,8 +10,9 @@ function getAllUsers(req, res, next) {
   const acceptQueries = [
     'sort_by',
     'order',
+    'username',
     'name',
-    'contact',
+    'email',
   ];
   if (Object.keys(req.query).every(query => acceptQueries.includes(query))) {
     selectAllUsers(req.query).then(users => {
