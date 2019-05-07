@@ -39,7 +39,7 @@ function getSite(req, res, next) {
 }
 
 function postSite(req, res, next) {
-  addSite(req.params, req.body).then(sites => {
+  addSite(req.body).then(sites => {
     if (sites.length === 0) {
       next({ status: 404 });
     } else {

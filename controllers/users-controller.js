@@ -35,7 +35,7 @@ function getUser(req, res, next) {
 }
 
 function postUser(req, res, next) {
-  addUser(req.params, req.body).then(users => {
+  addUser(req.body).then(users => {
     if (users.length === 0) {
       next({ status: 404 });
     } else {
