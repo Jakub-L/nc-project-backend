@@ -11,12 +11,12 @@ const {
 usersRouter
   .route('/')
   .get(getAllUsers)
+  .post(postUser)
   .all(methodNotAllowed);
 
 usersRouter
   .route('/:user_id')
   .get(getUser)
-  .post(postUser)
   .patch(patchUser)
   .delete(deleteUser)
   .all(methodNotAllowed);
