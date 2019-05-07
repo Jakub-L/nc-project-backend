@@ -3,7 +3,7 @@ const {
   selectPin,
   addPin,
   modifyPin,
-  removePin
+  removePin,
 } = require('../models/pins-models');
 
 function getAllPins(req, res, next) {
@@ -19,7 +19,7 @@ function getAllPins(req, res, next) {
     'min_longitude',
     'max_longitude',
     'min_altitude',
-    'max_altitude'
+    'max_altitude',
   ];
   if (Object.keys(req.query).every(query => acceptQueries.includes(query))) {
     selectAllPins(req.query).then(pins => {
@@ -81,5 +81,5 @@ module.exports = {
   getPin,
   postPin,
   patchPin,
-  deletePin
+  deletePin,
 };

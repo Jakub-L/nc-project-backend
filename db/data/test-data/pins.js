@@ -14,7 +14,7 @@ module.exports = [
   {
     pin_id: 2,
     user_id: 2,
-    site_id: 2,
+    site_id: 1,
     timestamp: '2019-05-02T10:44:43Z',
     latitude: 53.7948071,
     longitude: -1.5470454,

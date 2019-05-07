@@ -3,7 +3,7 @@ const {
   selectSite,
   addSite,
   modifySite,
-  removeSite
+  removeSite,
 } = require('../models/sites-models');
 
 function getAllSites(req, res, next) {
@@ -17,7 +17,7 @@ function getAllSites(req, res, next) {
     'min_longitude',
     'max_longitude',
     'min_altitude',
-    'max_altitude'
+    'max_altitude',
   ];
   if (Object.keys(req.query).every(query => acceptQueries.includes(query))) {
     selectAllSites(req.query).then(sites => {
@@ -79,5 +79,5 @@ module.exports = {
   getSite,
   postSite,
   patchSite,
-  deleteSite
+  deleteSite,
 };
