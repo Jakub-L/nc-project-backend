@@ -1,16 +1,12 @@
 const {
-  selectAllPins,
-  selectPin,
-  addPin,
-  modifyPin,
-  removePin,
+  selectAllPins, selectPin, addPin, modifyPin, removePin,
 } = require('../models/pins-models');
 
 function getAllPins(req, res, next) {
   const acceptQueries = [
     'sort_by',
     'order',
-    'creator', // users.name
+    'username', // users.username
     'email', // users.email
     'site_name', // sites.site_name
     'min_date',
@@ -23,7 +19,7 @@ function getAllPins(req, res, next) {
     'max_altitude',
   ];
   if (Object.keys(req.query).every(query => acceptQueries.includes(query))) {
-    selectAllPins(req.query).then(pins => {
+    selectAllPins(req.query).then((pins) => {
       res.status(200).json({ pins });
     });
   } else {
@@ -32,7 +28,7 @@ function getAllPins(req, res, next) {
 }
 
 function getPin(req, res, next) {
-  selectPin(req.params).then(pins => {
+  selectPin(req.params).then((pins) => {
     if (pins.length === 0) {
       next({ status: 404 });
     } else {
@@ -43,7 +39,7 @@ function getPin(req, res, next) {
 }
 
 function postPin(req, res, next) {
-  addPin(req.body).then(pins => {
+  addPin(req.body).then((pins) => {
     if (pins.length === 0) {
       next({ status: 404 });
     } else {
@@ -55,7 +51,7 @@ function postPin(req, res, next) {
 
 function patchPin(req, res, next) {
   modifyPin(req.params, req.body)
-    .then(pins => {
+    .then((pins) => {
       if (pins.length === 0) {
         next({ code: 404 });
       } else {
@@ -67,7 +63,7 @@ function patchPin(req, res, next) {
 }
 
 function deletePin(req, res, next) {
-  removePin(req.params).then(pins => {
+  removePin(req.params).then((pins) => {
     if (pins.length === 0) {
       next({ status: 404 });
     } else {
