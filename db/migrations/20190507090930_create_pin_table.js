@@ -1,3 +1,5 @@
+/* eslint-disable func-names */
+/* eslint-disable arrow-parens */
 exports.up = function (knex, Promise) {
   return knex.schema.createTable('pins', pinTable => {
     pinTable.increments('pin_id').primary();

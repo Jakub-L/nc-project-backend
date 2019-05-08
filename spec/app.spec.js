@@ -96,6 +96,26 @@ describe('/', () => {
               .true;
           }));
         });
+        describe('POST', () => {
+          const testPin = {
+            user_id: 1,
+            site_id: 1,
+            latitude: 53.123456,
+            longitude: -1.654321,
+            altitude: 44,
+            photo_url: 'https://www.city.ac.uk/__data/assets/image/0006/372714/Post-Bank.jpg',
+            note: 'POST test',
+          };
+          it('produces status: 201', () => {
+            request
+              .post('/api/pins')
+              .send(testPin)
+              .expect(201);
+          });
+          it('returns posted pin containing sent information', () => {
+            request.post('/api/pins').send(testPin);
+          });
+        });
       });
     });
   });
