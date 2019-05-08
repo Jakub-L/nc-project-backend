@@ -3,7 +3,7 @@ const connection = require('../db/connection');
 function selectAllPins(queryObj) {
   const sortObj = { sort_by: 'timestamp', order: 'desc' };
   const sortProps = ['sort_by', 'order'];
-  sortProps.forEach(sortProp => {
+  sortProps.forEach((sortProp) => {
     if (queryObj.hasOwnProperty(sortProp)) {
       sortObj[sortProp] = queryObj[sortProp];
       delete queryObj[sortProp];
@@ -11,7 +11,7 @@ function selectAllPins(queryObj) {
   });
 
   let rawCondition = '0 = 0';
-  Object.keys(queryObj).forEach(prop => {
+  Object.keys(queryObj).forEach((prop) => {
     if (prop === 'creator') {
       queryObj['users.name'] = queryObj[prop];
       delete queryObj[prop];
@@ -19,18 +19,12 @@ function selectAllPins(queryObj) {
       queryObj['sites.name'] = queryObj[prop];
       delete queryObj[prop];
     } else if (/^max_/.test(prop)) {
-      rawCondition = `${rawCondition} AND pins.${prop.replace(
-        /^max_/,
-        ''
-      )} <= ${queryObj[prop]}`;
+      rawCondition = `${rawCondition} AND pins.${prop.replace(/^max_/, '')} <= ${queryObj[prop]}`;
       delete queryObj[prop];
     } else if (/^min_/.test(prop)) {
-      rawCondition = `${rawCondition} AND pins.${prop.replace(
-        /^min_/,
-        ''
-      )} >= ${queryObj[prop]}`;
+      rawCondition = `${rawCondition} AND pins.${prop.replace(/^min_/, '')} >= ${queryObj[prop]}`;
       delete queryObj[prop];
-    };
+    }
   });
 
   return connection
@@ -56,7 +50,7 @@ function selectAllPins(queryObj) {
 }
 
 function selectPin(paramObj) {
-  Object.keys(paramObj).forEach(prop => {
+  Object.keys(paramObj).forEach((prop) => {
     paramObj[`pins.${prop}`] = paramObj[prop];
     delete paramObj[prop];
   });
@@ -80,7 +74,7 @@ function selectPin(paramObj) {
 }
 
 function addPin(pinReqBody) {
-  console.log(pinReqBody)
+  console.log(pinReqBody);
   const pin = {
     user_id: pinReqBody.user_id,
     site_id: pinReqBody.site_id,
@@ -89,10 +83,10 @@ function addPin(pinReqBody) {
     longitude: pinReqBody.longitude,
     altitude: pinReqBody.altitude,
     photo_url: pinReqBody.photo_url,
-    note: pinReqBody.note
+    note: pinReqBody.note,
   };
   return connection
-    .insert(pin)
+    .insert(pinReqBody)
     .into('pins')
     .returning('*');
 }
@@ -115,5 +109,5 @@ module.exports = {
   selectPin,
   addPin,
   modifyPin,
-  removePin
+  removePin,
 };
