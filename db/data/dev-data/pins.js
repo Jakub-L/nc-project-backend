@@ -1,6 +1,6 @@
 module.exports = [
   {
-    pin_id: 1,
+    // pin_id: 1,
     user_id: 1,
     site_id: 1,
     timestamp: '2019-05-02T10:44:43Z',
@@ -12,9 +12,9 @@ module.exports = [
     note: 'test pin 1',
   },
   {
-    pin_id: 2,
+    // pin_id: 2,
     user_id: 2,
-    site_id: 2,
+    site_id: 1,
     timestamp: '2019-05-02T10:44:43Z',
     latitude: 53.7948071,
     longitude: -1.5470454,
@@ -24,7 +24,7 @@ module.exports = [
     note: 'test pin 2',
   },
   {
-    pin_id: 3,
+    // pin_id: 3,
     user_id: 3,
     site_id: 3,
     timestamp: '2019-05-02T10:44:43Z',
@@ -36,7 +36,7 @@ module.exports = [
     note: 'test pin 3',
   },
   {
-    pin_id: 4,
+    // pin_id: 4,
     user_id: 4,
     site_id: 4,
     timestamp: '2019-05-02T10:44:43Z',
