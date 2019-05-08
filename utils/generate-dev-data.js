@@ -10,7 +10,6 @@ const sitesCount = 10;
 
 for (let i = 1; i <= pinsCount; i += 1) {
   pinsArray.push({
-    pin_id: i,
     user_id: faker.random.number({ min: 1, max: usersCount }),
     site_id: faker.random.number({ min: 1, max: sitesCount }),
     timestamp: faker.date.recent().toISOString(),
@@ -24,7 +23,6 @@ for (let i = 1; i <= pinsCount; i += 1) {
 
 for (let i = 1; i <= usersCount; i += 1) {
   usersArray.push({
-    user_id: i,
     username: faker.internet.userName(),
     name: `${faker.name.firstName()} ${faker.name.lastName()}`,
     email: faker.internet.email(),
@@ -34,7 +32,6 @@ for (let i = 1; i <= usersCount; i += 1) {
 
 for (let i = 1; i <= sitesCount; i += 1) {
   sitesArray.push({
-    site_id: i,
     site_name: faker.address.city(),
     latitude_min: faker.random.number({ min: 53.2, max: 53.5, precision: 0.000001 }),
     longitude_min: faker.random.number({ min: -1.7, max: -1.6, precision: 0.000001 }),
