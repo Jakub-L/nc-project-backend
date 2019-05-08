@@ -1,6 +1,6 @@
 module.exports = [
   {
-    site_id: 1,
+    // site_id: 1,
     site_name: 'Test Site 1',
     latitude_min: 53.0000001,
     longitude_min: -1.4000001,
@@ -10,7 +10,7 @@ module.exports = [
     altitude_max: 50,
   },
   {
-    site_id: 2,
+    // site_id: 2,
     site_name: 'Test Site 2',
     latitude_min: 52.0000001,
     longitude_min: -1.4000001,
@@ -20,7 +20,7 @@ module.exports = [
     altitude_max: 50,
   },
   {
-    site_id: 3,
+    // site_id: 3,
     site_name: 'Test Site 3',
     latitude_min: 53.0000001,
     longitude_min: -2.4000001,
@@ -30,7 +30,7 @@ module.exports = [
     altitude_max: 50,
   },
   {
-    site_id: 4,
+    // site_id: 4,
     site_name: 'Test Site 4',
     latitude_min: 53.0000001,
     longitude_min: -1.4000001,

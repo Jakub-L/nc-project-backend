@@ -12,8 +12,4 @@ exports.seed = (knex, Promise) => knex.migrate
   .then(() => knex('pins')
     .insert(pins)
     .returning('*'))
-  .then(() => {
-    ['user', 'site', 'pin'].forEach((item) => {
-      knex.raw(`SELECT SETVAL('${item}s_${item}_id_seq', MAX(${item}_id) FROM ${item}s)`);
-    });
   });
