@@ -11,5 +11,4 @@ exports.seed = (knex, Promise) => knex.migrate
     .returning('*'))
   .then(() => knex('pins')
     .insert(pins)
-    .returning('*'))
-  });
+    .returning('*'));
