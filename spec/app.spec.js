@@ -38,6 +38,30 @@ describe('/', () => {
               .true;
           }));
         });
+        describe('POST', () => {
+          const testUser = {
+            username: 'test',
+            name: 'Test',
+            email: 'test@email.com',
+          };
+          it('produces status: 201', () => {
+            request
+              .post('/api/users')
+              .send(testUser)
+              .expect(201);
+          });
+          it('returns posted user containing sent information', () => {
+            request
+              .post('/api/users')
+              .send(testUser)
+              .then((res) => {
+                const resUser = res.body.user;
+                Object.keys(testUser).forEach((prop) => {
+                  expect(String(testUser[prop])).to.equal(String(resUser[prop]));
+                });
+              });
+          });
+        });
       });
     });
     describe('/sites', () => {
@@ -65,6 +89,34 @@ describe('/', () => {
             expect(sites.every(site => keysRequired.every(key => site.hasOwnProperty(key)))).to.be
               .true;
           }));
+        });
+        describe('POST', () => {
+          const testSite = {
+            site_name: 'Test Site',
+            latitude_min: 0.1234567,
+            longitude_min: -8.7654321,
+            altitude_min: 10,
+            latitude_max: 99.1234567,
+            longitude_max: -0.7654321,
+            altitude_max: 50,
+          };
+          it('produces status: 201', () => {
+            request
+              .post('/api/sites')
+              .send(testSite)
+              .expect(201);
+          });
+          it('returns posted site containing sent information', () => {
+            request
+              .post('/api/sites')
+              .send(testSite)
+              .then((res) => {
+                const resSite = res.body.site;
+                Object.keys(testSite).forEach((prop) => {
+                  expect(String(testSite[prop])).to.equal(String(resSite[prop]));
+                });
+              });
+          });
         });
       });
     });
@@ -118,9 +170,8 @@ describe('/', () => {
               .send(testPin)
               .then((res) => {
                 const resPin = res.body.pin;
-                console.log(resPin, '<--- resPin')
                 Object.keys(testPin).forEach((prop) => {
-                  expect(testPin[prop]).to.equal(resPin[prop]);
+                  expect(String(testPin[prop])).to.equal(String(resPin[prop]));
                 });
               });
           });
