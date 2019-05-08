@@ -1,22 +1,19 @@
 const { users, sites, pins } = require('../data');
 
-exports.seed = (knex, Promise) => {
-  return knex.migrate
-    .rollback()
-    .then(() => knex.migrate.latest())
-    .then(() => {
-      return knex('users')
-        .insert(users)
-        .returning('*');
-    })
-    .then(() => {
-      return knex('sites')
-        .insert(sites)
-        .returning('*');
-    })
-    .then(() => {
-      return knex('pins')
-        .insert(pins)
-        .returning('*');
+exports.seed = (knex, Promise) => knex.migrate
+  .rollback()
+  .then(() => knex.migrate.latest())
+  .then(() => knex('users')
+    .insert(users)
+    .returning('*'))
+  .then(() => knex('sites')
+    .insert(sites)
+    .returning('*'))
+  .then(() => knex('pins')
+    .insert(pins)
+    .returning('*'))
+  .then(() => {
+    ['user', 'site', 'pin'].forEach((item) => {
+      knex.schema.raw(`SELECT SETVAL('${item}s_${item}_id_seq', MAX(${item}_id) FROM ${item}s)`);
     });
-};
+  });
