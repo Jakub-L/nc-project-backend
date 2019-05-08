@@ -113,7 +113,16 @@ describe('/', () => {
               .expect(201);
           });
           it('returns posted pin containing sent information', () => {
-            request.post('/api/pins').send(testPin);
+            request
+              .post('/api/pins')
+              .send(testPin)
+              .then((res) => {
+                const resPin = res.body.pin;
+                console.log(resPin, '<--- resPin')
+                Object.keys(testPin).forEach((prop) => {
+                  expect(testPin[prop]).to.equal(resPin[prop]);
+                });
+              });
           });
         });
       });
