@@ -1,102 +1,92 @@
 [
     {
-        "site_id": 1,
-        "site_name": "Port Arvilla",
-        "latitude_min": 53.397529,
-        "longitude_min": -1.6480979999999998,
+        "site_name": "Tromphaven",
+        "latitude_min": 53.272172999999995,
+        "longitude_min": -1.637727,
         "altitude_min": 1,
-        "latitude_max": 54.6566,
-        "longitude_max": -1.496608,
+        "latitude_max": 54.679140999999994,
+        "longitude_max": -1.431729,
+        "altitude_max": 154
+    },
+    {
+        "site_name": "South Elnaborough",
+        "latitude_min": 53.341688,
+        "longitude_min": -1.60605,
+        "altitude_min": 5,
+        "latitude_max": 54.657168,
+        "longitude_max": -1.495259,
+        "altitude_max": 150
+    },
+    {
+        "site_name": "East Aileen",
+        "latitude_min": 53.412163,
+        "longitude_min": -1.696607,
+        "altitude_min": 5,
+        "latitude_max": 54.553470999999995,
+        "longitude_max": -1.4952109999999998,
         "altitude_max": 152
     },
     {
-        "site_id": 2,
-        "site_name": "Christineview",
-        "latitude_min": 53.416373,
-        "longitude_min": -1.611224,
+        "site_name": "East Nestor",
+        "latitude_min": 53.46568,
+        "longitude_min": -1.698164,
+        "altitude_min": 0,
+        "latitude_max": 54.557930999999996,
+        "longitude_max": -1.414339,
+        "altitude_max": 153
+    },
+    {
+        "site_name": "Flatleyport",
+        "latitude_min": 53.399577,
+        "longitude_min": -1.679956,
+        "altitude_min": 1,
+        "latitude_max": 54.523669,
+        "longitude_max": -1.4972269999999999,
+        "altitude_max": 150
+    },
+    {
+        "site_name": "North Dolly",
+        "latitude_min": 53.274542,
+        "longitude_min": -1.626951,
         "altitude_min": 3,
-        "latitude_max": 54.687312,
-        "longitude_max": -1.456125,
+        "latitude_max": 54.585817999999996,
+        "longitude_max": -1.415392,
+        "altitude_max": 153
+    },
+    {
+        "site_name": "East Medamouth",
+        "latitude_min": 53.292111999999996,
+        "longitude_min": -1.637249,
+        "altitude_min": 0,
+        "latitude_max": 54.638650999999996,
+        "longitude_max": -1.4128509999999999,
         "altitude_max": 155
     },
     {
-        "site_id": 3,
-        "site_name": "New Evestad",
-        "latitude_min": 53.306345,
-        "longitude_min": -1.608172,
-        "altitude_min": 2,
-        "latitude_max": 54.578376,
-        "longitude_max": -1.46294,
-        "altitude_max": 154
-    },
-    {
-        "site_id": 4,
-        "site_name": "Lake Lenore",
-        "latitude_min": 53.286372,
-        "longitude_min": -1.632809,
+        "site_name": "Jackiebury",
+        "latitude_min": 53.25479,
+        "longitude_min": -1.674623,
         "altitude_min": 5,
-        "latitude_max": 54.540428999999996,
-        "longitude_max": -1.403549,
-        "altitude_max": 152
+        "latitude_max": 54.511043,
+        "longitude_max": -1.4585569999999999,
+        "altitude_max": 155
     },
     {
-        "site_id": 5,
-        "site_name": "Dietrichfurt",
-        "latitude_min": 53.441207999999996,
-        "longitude_min": -1.60991,
-        "altitude_min": 3,
-        "latitude_max": 54.65394,
-        "longitude_max": -1.419277,
-        "altitude_max": 154
-    },
-    {
-        "site_id": 6,
-        "site_name": "West Gage",
-        "latitude_min": 53.247778999999994,
-        "longitude_min": -1.6522089999999998,
-        "altitude_min": 2,
-        "latitude_max": 54.600007999999995,
-        "longitude_max": -1.4819579999999999,
-        "altitude_max": 151
-    },
-    {
-        "site_id": 7,
-        "site_name": "South Tyreekport",
-        "latitude_min": 53.220132,
-        "longitude_min": -1.6744439999999998,
-        "altitude_min": 3,
-        "latitude_max": 54.635317,
-        "longitude_max": -1.4482819999999998,
+        "site_name": "West Ada",
+        "latitude_min": 53.454268,
+        "longitude_min": -1.671431,
+        "altitude_min": 0,
+        "latitude_max": 54.525099999999995,
+        "longitude_max": -1.4120059999999999,
         "altitude_max": 150
     },
     {
-        "site_id": 8,
-        "site_name": "Port Hershel",
-        "latitude_min": 53.265938,
-        "longitude_min": -1.699257,
+        "site_name": "Irvingberg",
+        "latitude_min": 53.450697,
+        "longitude_min": -1.674558,
         "altitude_min": 5,
-        "latitude_max": 54.655283999999995,
-        "longitude_max": -1.452974,
-        "altitude_max": 152
-    },
-    {
-        "site_id": 9,
-        "site_name": "Prohaskaside",
-        "latitude_min": 53.237787999999995,
-        "longitude_min": -1.602128,
-        "altitude_min": 1,
-        "latitude_max": 54.638908,
-        "longitude_max": -1.43593,
-        "altitude_max": 152
-    },
-    {
-        "site_id": 10,
-        "site_name": "Lake Simeonmouth",
-        "latitude_min": 53.292221,
-        "longitude_min": -1.651721,
-        "altitude_min": 1,
-        "latitude_max": 54.645438999999996,
-        "longitude_max": -1.498317,
-        "altitude_max": 150
+        "latitude_max": 54.672368999999996,
+        "longitude_max": -1.489739,
+        "altitude_max": 153
     }
 ]
