@@ -1,4 +1,5 @@
 const faker = require('faker');
+const bcrypt = require('bcrypt');
 const fs = require('fs');
 
 const pinsArray = [];
@@ -23,8 +24,8 @@ for (let i = 1; i <= pinsCount; i += 1) {
 
 for (let i = 1; i <= usersCount; i += 1) {
   usersArray.push({
-    username: faker.internet.userName(),
     name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+    password: bcrypt.hash('password', 10),
     email: faker.internet.email(),
     user_photo: faker.internet.avatar(),
   });
