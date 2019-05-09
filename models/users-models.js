@@ -84,7 +84,9 @@ function checkPassword(email, password) {
           user_id,
         };
       }
-      return Promise.reject();
+      if (!match) {
+        return Promise.reject();
+      }
     });
 }
 
