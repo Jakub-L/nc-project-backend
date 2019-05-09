@@ -42,7 +42,7 @@ function selectUser(paramObj) {
 function addUser(userReqBody) {
   const user = {
     name: userReqBody.name,
-    password_hash: bcrypt.hash(userReqBody.password, 10),
+    password_hash: bcrypt.hashSync(userReqBody.password, 10),
     email: userReqBody.email,
     user_photo:
       userReqBody.user_photo

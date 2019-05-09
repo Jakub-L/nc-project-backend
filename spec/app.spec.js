@@ -40,7 +40,7 @@ describe('/', () => {
         });
         describe('POST', () => {
           const testUser = {
-            password_hash: 'test',
+            password: 'test',
             name: 'Test',
             email: 'test@email.com',
           };
@@ -57,7 +57,9 @@ describe('/', () => {
               .then((res) => {
                 const resUser = res.body.user;
                 Object.keys(testUser).forEach((prop) => {
-                  expect(String(testUser[prop])).to.equal(String(resUser[prop]));
+                  if (prop !== 'password') {
+                    expect(String(testUser[prop])).to.equal(String(resUser[prop]));
+                  }
                 });
               });
           });
