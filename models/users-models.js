@@ -52,39 +52,24 @@ function selectUser(paramObj) {
 
 function addUser(userReqBody) {
   const user = {
-<<<<<<< HEAD
     name: userReqBody.name,
     password_hash: bcrypt.hashSync(userReqBody.password, 10),
     email: userReqBody.email,
     user_photo:
       userReqBody.user_photo
       || 'https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_user-circle-512.png',
-=======
-    username: userReqBody.username,
-    name: userReqBody.name,
-    email: userReqBody.email,
-    user_photo: userReqBody.user_photo || 'https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_user-circle-512.png',
->>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
   };
   return connection
     .insert(user)
     .into('users')
-<<<<<<< HEAD
     .returning('name', 'email', 'user_photo', 'user_id');
-=======
-    .returning('*');
->>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
 }
 
 function modifyUser(paramObj, updateObj) {
   return connection('users')
     .where(paramObj)
     .update(updateObj)
-<<<<<<< HEAD
     .returning('name', 'email', 'user_photo', 'user_id');
-=======
-    .returning('*');
->>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
 }
 
 function removeUser(paramObj) {
@@ -93,7 +78,6 @@ function removeUser(paramObj) {
     .del();
 }
 
-<<<<<<< HEAD
 function checkPassword(email, password) {
   return connection('users')
     .where({ email })
@@ -115,16 +99,11 @@ function checkPassword(email, password) {
     });
 }
 
-=======
->>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
 module.exports = {
   selectAllUsers,
   selectUser,
   addUser,
   modifyUser,
   removeUser,
-<<<<<<< HEAD
   checkPassword,
-=======
->>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
 };
