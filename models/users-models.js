@@ -72,6 +72,7 @@ function checkPassword(email, password) {
     .where({ email })
     .returning('*')
     .then(([user]) => {
+      console.log(user);
       const match = bcrypt.compareSync(password, user.password_hash);
       if (match) {
         const {
