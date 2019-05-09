@@ -16,15 +16,15 @@ usersRouter
   .all(methodNotAllowed);
 
 usersRouter
+  .route('/login')
+  .post(authenticateUser)
+  .all(methodNotAllowed);
+
+usersRouter
   .route('/:user_id')
   .get(getUser)
   .patch(patchUser)
   .delete(deleteUser)
-  .all(methodNotAllowed);
-
-usersRouter
-  .route('/login')
-  .post(authenticateUser)
   .all(methodNotAllowed);
 
 module.exports = usersRouter;
