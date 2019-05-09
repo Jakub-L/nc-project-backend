@@ -6,6 +6,10 @@ function getAllPins(req, res, next) {
   const acceptQueries = [
     'sort_by',
     'order',
+<<<<<<< HEAD
+=======
+    'username', // users.username
+>>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
     'email', // users.email
     'site_name', // sites.site_name
     'min_date',

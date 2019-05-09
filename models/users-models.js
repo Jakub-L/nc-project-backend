@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 const bcrypt = require('bcrypt');
+=======
+>>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
 const connection = require('../db/connection');
 
 function selectAllUsers(queryObj) {
   const sortObj = { sort_by: 'name', order: 'asc' };
   const sortProps = ['sort_by', 'order'];
+<<<<<<< HEAD
   sortProps.forEach((sortProp) => {
+=======
+  sortProps.forEach(sortProp => {
+>>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
     if (queryObj.hasOwnProperty(sortProp)) {
       sortObj[sortProp] = queryObj[sortProp];
       delete queryObj[sortProp];
@@ -14,6 +21,10 @@ function selectAllUsers(queryObj) {
   return connection
     .select(
       'users.user_id AS user_id',
+<<<<<<< HEAD
+=======
+      'users.username AS username',
+>>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
       'users.name AS name',
       'users.email AS email',
       'users.user_photo AS user_photo',
@@ -24,6 +35,7 @@ function selectAllUsers(queryObj) {
 }
 
 function selectUser(paramObj) {
+<<<<<<< HEAD
   Object.keys(paramObj).forEach((prop) => {
     paramObj[`users.${prop}`] = paramObj[prop];
     delete paramObj[prop];
@@ -31,6 +43,16 @@ function selectUser(paramObj) {
   return connection
     .select(
       'users.user_id AS user_id',
+=======
+  Object.keys(paramObj).forEach(prop => {
+    paramObj[`users.${prop}`] = paramObj[prop];
+    delete paramObj[prop];
+  })
+  return connection
+    .select(
+      'users.user_id AS user_id',
+      'users.username AS username',
+>>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
       'users.name AS name',
       'users.email AS email',
       'users.user_photo AS user_photo',
@@ -41,24 +63,39 @@ function selectUser(paramObj) {
 
 function addUser(userReqBody) {
   const user = {
+<<<<<<< HEAD
     name: userReqBody.name,
     password_hash: bcrypt.hashSync(userReqBody.password, 10),
     email: userReqBody.email,
     user_photo:
       userReqBody.user_photo
       || 'https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_user-circle-512.png',
+=======
+    username: userReqBody.username,
+    name: userReqBody.name,
+    email: userReqBody.email,
+    user_photo: userReqBody.user_photo || 'https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_user-circle-512.png',
+>>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
   };
   return connection
     .insert(user)
     .into('users')
+<<<<<<< HEAD
     .returning('name', 'email', 'user_photo', 'user_id');
+=======
+    .returning('*');
+>>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
 }
 
 function modifyUser(paramObj, updateObj) {
   return connection('users')
     .where(paramObj)
     .update(updateObj)
+<<<<<<< HEAD
     .returning('name', 'email', 'user_photo', 'user_id');
+=======
+    .returning('*');
+>>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
 }
 
 function removeUser(paramObj) {
@@ -67,6 +104,7 @@ function removeUser(paramObj) {
     .del();
 }
 
+<<<<<<< HEAD
 function checkPassword(email, password) {
   return connection('users')
     .where({ email })
@@ -88,11 +126,16 @@ function checkPassword(email, password) {
     });
 }
 
+=======
+>>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
 module.exports = {
   selectAllUsers,
   selectUser,
   addUser,
   modifyUser,
   removeUser,
+<<<<<<< HEAD
   checkPassword,
+=======
+>>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
 };

@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "name": "Randal Wiza",
         "password_hash": "$2b$10$WkAqVfCRPL8900E.90WEr.VdxbnfMNsC6An8Qe18EWYoTBEWa6/AK",
         "email": "Ressie.Jacobs@gmail.com",
@@ -178,5 +179,215 @@
         "password_hash": "$2b$10$5mTdXR./9fjtBOsaiutZBOt2nN5qnJXFAToSBjIbZGHu20.9ymh06",
         "email": "Payton_Von@hotmail.com",
         "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/cofla/128.jpg"
+=======
+        "user_id": 1,
+        "username": "Brook_Breitenberg15",
+        "name": "Elvis Rau",
+        "email": "Emie52@yahoo.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/snowwrite/128.jpg"
+    },
+    {
+        "user_id": 2,
+        "username": "Sylvia_Rosenbaum86",
+        "name": "Tre Sanford",
+        "email": "Yolanda.Will@gmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/johndezember/128.jpg"
+    },
+    {
+        "user_id": 3,
+        "username": "Christop.Schmidt",
+        "name": "Ashleigh Jones",
+        "email": "Verda37@hotmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/ipavelek/128.jpg"
+    },
+    {
+        "user_id": 4,
+        "username": "Joany.Zulauf21",
+        "name": "Albin Reynolds",
+        "email": "Reuben.Prosacco@hotmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/mcflydesign/128.jpg"
+    },
+    {
+        "user_id": 5,
+        "username": "Emanuel_Hills",
+        "name": "Shad Price",
+        "email": "Lelia_Cronin@hotmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/h1brd/128.jpg"
+    },
+    {
+        "user_id": 6,
+        "username": "Pierce5",
+        "name": "Raphaelle Hansen",
+        "email": "Dewayne.Krajcik92@yahoo.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/harry_sistalam/128.jpg"
+    },
+    {
+        "user_id": 7,
+        "username": "Webster_Stamm14",
+        "name": "Ubaldo Ratke",
+        "email": "Aliya91@hotmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/souuf/128.jpg"
+    },
+    {
+        "user_id": 8,
+        "username": "Clementine_Ziemann48",
+        "name": "Watson Smith",
+        "email": "Eliseo_Hodkiewicz82@yahoo.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/josecarlospsh/128.jpg"
+    },
+    {
+        "user_id": 9,
+        "username": "Edd.Rath",
+        "name": "Laura Vandervort",
+        "email": "Liana29@yahoo.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/charliegann/128.jpg"
+    },
+    {
+        "user_id": 10,
+        "username": "Betty_Willms",
+        "name": "Nora Miller",
+        "email": "Dora_Prohaska@hotmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/HenryHoffman/128.jpg"
+    },
+    {
+        "user_id": 11,
+        "username": "Fatima.Sporer",
+        "name": "Justen Harber",
+        "email": "Stevie.Veum@hotmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/sovesove/128.jpg"
+    },
+    {
+        "user_id": 12,
+        "username": "Johathan.Balistreri64",
+        "name": "Monroe Hagenes",
+        "email": "Dorothea.DAmore@hotmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/myastro/128.jpg"
+    },
+    {
+        "user_id": 13,
+        "username": "Keith72",
+        "name": "Thaddeus Prosacco",
+        "email": "Camila31@hotmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/gt/128.jpg"
+    },
+    {
+        "user_id": 14,
+        "username": "Itzel85",
+        "name": "Johnny Hettinger",
+        "email": "Everett.Armstrong43@hotmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/donjain/128.jpg"
+    },
+    {
+        "user_id": 15,
+        "username": "Darion.Boehm",
+        "name": "Golden Gulgowski",
+        "email": "Braden_Stoltenberg12@yahoo.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/buddhasource/128.jpg"
+    },
+    {
+        "user_id": 16,
+        "username": "Hailey_Wiegand33",
+        "name": "Christy Leuschke",
+        "email": "Andy.Roob@hotmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/namankreative/128.jpg"
+    },
+    {
+        "user_id": 17,
+        "username": "Russ92",
+        "name": "Elwin Koch",
+        "email": "Garnet.Schuster2@yahoo.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/1markiz/128.jpg"
+    },
+    {
+        "user_id": 18,
+        "username": "Lindsay.Doyle17",
+        "name": "Irwin Bogan",
+        "email": "Lizzie_Tromp28@gmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/alek_djuric/128.jpg"
+    },
+    {
+        "user_id": 19,
+        "username": "Abbey68",
+        "name": "Jarred Mertz",
+        "email": "Marcellus_Crooks98@yahoo.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/bryan_topham/128.jpg"
+    },
+    {
+        "user_id": 20,
+        "username": "Alycia68",
+        "name": "Alexane Lynch",
+        "email": "Evalyn.Jast33@yahoo.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/geobikas/128.jpg"
+    },
+    {
+        "user_id": 21,
+        "username": "Rebeka.Bernhard",
+        "name": "Clara Bradtke",
+        "email": "Alessandro_Batz@yahoo.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/nwdsha/128.jpg"
+    },
+    {
+        "user_id": 22,
+        "username": "Era_Baumbach",
+        "name": "Jeffry O'Reilly",
+        "email": "Lamont.Crist99@gmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/weavermedia/128.jpg"
+    },
+    {
+        "user_id": 23,
+        "username": "Luz.Larkin",
+        "name": "Elvis Pfeffer",
+        "email": "Etha.Torphy@gmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/ankitind/128.jpg"
+    },
+    {
+        "user_id": 24,
+        "username": "Grant_Koch",
+        "name": "Tito Rau",
+        "email": "Quinten57@hotmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/allagringaus/128.jpg"
+    },
+    {
+        "user_id": 25,
+        "username": "Mallie_Abernathy",
+        "name": "Bernie McDermott",
+        "email": "Felix.Strosin@yahoo.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/d00maz/128.jpg"
+    },
+    {
+        "user_id": 26,
+        "username": "Cydney_Streich61",
+        "name": "Lolita Oberbrunner",
+        "email": "Marcelo62@hotmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/goddardlewis/128.jpg"
+    },
+    {
+        "user_id": 27,
+        "username": "Carolina_Quigley",
+        "name": "Melody Funk",
+        "email": "Gardner86@gmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/uxward/128.jpg"
+    },
+    {
+        "user_id": 28,
+        "username": "Audrey6",
+        "name": "Ebony Keeling",
+        "email": "Vergie.Gerhold67@hotmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/marlinjayakody/128.jpg"
+    },
+    {
+        "user_id": 29,
+        "username": "Reid.Price93",
+        "name": "Edythe Schoen",
+        "email": "Elise.Kassulke@hotmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/beshur/128.jpg"
+    },
+    {
+        "user_id": 30,
+        "username": "Cleora13",
+        "name": "Gwendolyn Bergstrom",
+        "email": "Liana93@hotmail.com",
+        "user_photo": "https://s3.amazonaws.com/uifaces/faces/twitter/ryuchi311/128.jpg"
+>>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
     }
 ]
