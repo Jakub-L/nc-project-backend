@@ -10,7 +10,10 @@ const {
 function authenticateUser(req, res, next) {
   const { email, password } = req.body;
   checkPassword(email, password)
-    .then(user => res.status(200).json({ user }))
+    .then((user) => {
+      console.log(user);
+      res.status(200).json({ user });
+    })
     .catch(next({ status: 400 }));
 }
 
