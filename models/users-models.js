@@ -1,17 +1,10 @@
-<<<<<<< HEAD
 const bcrypt = require('bcrypt');
-=======
->>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
 const connection = require('../db/connection');
 
 function selectAllUsers(queryObj) {
   const sortObj = { sort_by: 'name', order: 'asc' };
   const sortProps = ['sort_by', 'order'];
-<<<<<<< HEAD
   sortProps.forEach((sortProp) => {
-=======
-  sortProps.forEach(sortProp => {
->>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
     if (queryObj.hasOwnProperty(sortProp)) {
       sortObj[sortProp] = queryObj[sortProp];
       delete queryObj[sortProp];
@@ -21,10 +14,6 @@ function selectAllUsers(queryObj) {
   return connection
     .select(
       'users.user_id AS user_id',
-<<<<<<< HEAD
-=======
-      'users.username AS username',
->>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
       'users.name AS name',
       'users.email AS email',
       'users.user_photo AS user_photo',

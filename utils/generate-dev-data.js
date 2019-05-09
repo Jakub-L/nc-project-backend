@@ -24,13 +24,8 @@ for (let i = 1; i <= pinsCount; i += 1) {
 
 for (let i = 1; i <= usersCount; i += 1) {
   usersArray.push({
-<<<<<<< HEAD
     name: `${faker.name.firstName()} ${faker.name.lastName()}`,
     password_hash: bcrypt.hashSync('password', 10),
-=======
-    username: faker.internet.userName(),
-    name: `${faker.name.firstName()} ${faker.name.lastName()}`,
->>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
     email: faker.internet.email(),
     user_photo: faker.internet.avatar(),
   });
