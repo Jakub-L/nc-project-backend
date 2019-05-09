@@ -22,12 +22,9 @@ usersRouter
   .delete(deleteUser)
   .all(methodNotAllowed);
 
-<<<<<<< HEAD
 usersRouter
   .route('/login')
   .post(authenticateUser)
   .all(methodNotAllowed);
 
-=======
->>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
 module.exports = usersRouter;
