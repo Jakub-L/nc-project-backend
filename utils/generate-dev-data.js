@@ -1,8 +1,5 @@
 const faker = require('faker');
-<<<<<<< HEAD
 const bcrypt = require('bcrypt');
-=======
->>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
 const fs = require('fs');
 
 const pinsArray = [];

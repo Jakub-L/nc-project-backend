@@ -1,10 +1,7 @@
 const usersRouter = require('express').Router();
 const { methodNotAllowed } = require('../errors');
 const {
-<<<<<<< HEAD
   authenticateUser,
-=======
->>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
   getAllUsers,
   getUser,
   postUser,

@@ -35,7 +35,6 @@ function selectAllUsers(queryObj) {
 }
 
 function selectUser(paramObj) {
-<<<<<<< HEAD
   Object.keys(paramObj).forEach((prop) => {
     paramObj[`users.${prop}`] = paramObj[prop];
     delete paramObj[prop];
@@ -43,16 +42,6 @@ function selectUser(paramObj) {
   return connection
     .select(
       'users.user_id AS user_id',
-=======
-  Object.keys(paramObj).forEach(prop => {
-    paramObj[`users.${prop}`] = paramObj[prop];
-    delete paramObj[prop];
-  })
-  return connection
-    .select(
-      'users.user_id AS user_id',
-      'users.username AS username',
->>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
       'users.name AS name',
       'users.email AS email',
       'users.user_photo AS user_photo',
