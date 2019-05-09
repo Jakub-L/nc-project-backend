@@ -1,4 +1,3 @@
-const bcrypt = require('bcrypt');
 const connection = require('../db/connection');
 
 function selectAllUsers(queryObj) {
@@ -67,35 +66,10 @@ function removeUser(paramObj) {
     .del();
 }
 
-function checkPassword(email, password) {
-  return connection('users')
-    .where({ email })
-    .returning('*')
-    .then(([user]) => {
-      console.log(user);
-      const match = bcrypt.compareSync(password, user.password_hash);
-      if (match) {
-        const {
-          email, name, user_photo, user_id,
-        } = user;
-        return {
-          email,
-          name,
-          user_photo,
-          user_id,
-        };
-      }
-      if (!match) {
-        return Promise.reject();
-      }
-    });
-}
-
 module.exports = {
   selectAllUsers,
   selectUser,
   addUser,
   modifyUser,
   removeUser,
-  checkPassword,
 };

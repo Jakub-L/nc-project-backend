@@ -4,18 +4,7 @@ const {
   addUser,
   modifyUser,
   removeUser,
-  checkPassword,
 } = require('../models/users-models');
-
-function authenticateUser(req, res, next) {
-  const { email, password } = req.body;
-  checkPassword(email, password)
-    .then((user) => {
-      console.log(user);
-      res.status(200).json({ user });
-    })
-    .catch(next({ status: 400 }));
-}
 
 function getAllUsers(req, res, next) {
   const acceptQueries = ['sort_by', 'order', 'name', 'email'];
@@ -75,7 +64,6 @@ function deleteUser(req, res, next) {
 }
 
 module.exports = {
-  authenticateUser,
   getAllUsers,
   getUser,
   postUser,
