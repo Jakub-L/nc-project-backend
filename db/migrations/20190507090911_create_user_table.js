@@ -8,10 +8,6 @@ exports.up = function (knex, Promise) {
   });
 };
 
-<<<<<<< HEAD
 exports.down = function (knex, Promise) {
-=======
-exports.down = function(knex, Promise) {
->>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
   return knex.schema.dropTable('users');
 };
