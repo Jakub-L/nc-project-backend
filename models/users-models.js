@@ -67,10 +67,32 @@ function removeUser(paramObj) {
     .del();
 }
 
+function checkPassword(email, password) {
+  return connection('users')
+    .where({ email })
+    .returning('*')
+    .then(([user]) => {
+      const match = bcrypt.compareSync(password, user.password_hash);
+      if (match) {
+        const {
+          email, name, user_photo, user_id,
+        } = user;
+        return {
+          email,
+          name,
+          user_photo,
+          user_id,
+        };
+      }
+      return Promise.reject();
+    });
+}
+
 module.exports = {
   selectAllUsers,
   selectUser,
   addUser,
   modifyUser,
   removeUser,
+  checkPassword,
 };

@@ -1,6 +1,7 @@
 const usersRouter = require('express').Router();
 const { methodNotAllowed } = require('../errors');
 const {
+  authenticateUser,
   getAllUsers,
   getUser,
   postUser,
@@ -19,6 +20,11 @@ usersRouter
   .get(getUser)
   .patch(patchUser)
   .delete(deleteUser)
+  .all(methodNotAllowed);
+
+usersRouter
+  .route('/login')
+  .post(authenticateUser)
   .all(methodNotAllowed);
 
 module.exports = usersRouter;
