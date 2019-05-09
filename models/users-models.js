@@ -1,9 +1,10 @@
+const bcrypt = require('bcrypt');
 const connection = require('../db/connection');
 
 function selectAllUsers(queryObj) {
   const sortObj = { sort_by: 'name', order: 'asc' };
   const sortProps = ['sort_by', 'order'];
-  sortProps.forEach(sortProp => {
+  sortProps.forEach((sortProp) => {
     if (queryObj.hasOwnProperty(sortProp)) {
       sortObj[sortProp] = queryObj[sortProp];
       delete queryObj[sortProp];
@@ -13,7 +14,6 @@ function selectAllUsers(queryObj) {
   return connection
     .select(
       'users.user_id AS user_id',
-      'users.username AS username',
       'users.name AS name',
       'users.email AS email',
       'users.user_photo AS user_photo',
@@ -24,14 +24,13 @@ function selectAllUsers(queryObj) {
 }
 
 function selectUser(paramObj) {
-  Object.keys(paramObj).forEach(prop => {
+  Object.keys(paramObj).forEach((prop) => {
     paramObj[`users.${prop}`] = paramObj[prop];
     delete paramObj[prop];
-  })
+  });
   return connection
     .select(
       'users.user_id AS user_id',
-      'users.username AS username',
       'users.name AS name',
       'users.email AS email',
       'users.user_photo AS user_photo',
@@ -42,22 +41,24 @@ function selectUser(paramObj) {
 
 function addUser(userReqBody) {
   const user = {
-    username: userReqBody.username,
     name: userReqBody.name,
+    password_hash: bcrypt.hash(userReqBody.password, 10),
     email: userReqBody.email,
-    user_photo: userReqBody.user_photo || 'https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_user-circle-512.png',
+    user_photo:
+      userReqBody.user_photo
+      || 'https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_user-circle-512.png',
   };
   return connection
     .insert(user)
     .into('users')
-    .returning('*');
+    .returning('name', 'email', 'user_photo', 'user_id');
 }
 
 function modifyUser(paramObj, updateObj) {
   return connection('users')
     .where(paramObj)
     .update(updateObj)
-    .returning('*');
+    .returning('name', 'email', 'user_photo', 'user_id');
 }
 
 function removeUser(paramObj) {
