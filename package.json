@@ -17,7 +17,7 @@
     "seed:prod": "NODE_ENV=production DATABASE_URL=$(heroku config:get DATABASE_URL) knex seed:run",
     "migrate:latest:prod": "NODE_ENV=production DATABASE_URL=$(heroku config:get DATABASE_URL) knex migrate:latest",
     "migrate:rollback:prod": "NODE_ENV=production DATABASE_URL=$(heroku config:get DATABASE_URL) knex migrate:rollback",
-    "heroku-rebuild": "npm run setup-dbs && npm run migrate:latest:prod && npm run seed:prod && git push heroku server-setup:master",
+    "heroku-rebuild": "npm run setup-dbs && npm run migrate:latest:prod && npm run seed:prod && git push heroku feature-passwords:master",
     "generate-dev-data": "node utils/generate-dev-data.js"
   },
   "repository": {
@@ -42,7 +42,6 @@
     "supertest": "^4.0.2"
   },
   "dependencies": {
-<<<<<<< HEAD
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -52,15 +51,5 @@
     "heroku": "^7.24.1",
     "knex": "^0.16.5",
     "pg": "^7.10.0"
-=======
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "express": "^4.16.4",
-    "heroku": "^7.24.1",
-    "knex": "^0.16.5",
-    "pg": "^7.10.0",
-    "eslint-plugin-import": "^2.17.2",
-    "faker": "^4.1.0"
->>>>>>> c6145ea34085357e37cceb3e95db523e8733400d
   }
 }
