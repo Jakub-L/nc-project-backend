@@ -85,7 +85,7 @@ function addPin(pinReqBody) {
     note: pinReqBody.note,
   };
   return connection
-    .insert(pinReqBody)
+    .insert(pin)
     .into('pins')
     .returning('*');
 }
