@@ -33,14 +33,14 @@ describe('/', () => {
             expect(users).to.have.lengthOf(4);
           }));
           it('provides each user object with associated keys', () => request.get('/api/users').then(({ body: { users } }) => {
-            const keysRequired = ['user_id', 'username', 'name', 'email', 'user_photo'];
+            const keysRequired = ['user_id', 'name', 'email', 'user_photo'];
             expect(users.every(user => keysRequired.every(key => user.hasOwnProperty(key)))).to.be
               .true;
           }));
         });
         describe('POST', () => {
           const testUser = {
-            username: 'test',
+            password: 'test',
             name: 'Test',
             email: 'test@email.com',
           };
@@ -57,7 +57,9 @@ describe('/', () => {
               .then((res) => {
                 const resUser = res.body.user;
                 Object.keys(testUser).forEach((prop) => {
-                  expect(String(testUser[prop])).to.equal(String(resUser[prop]));
+                  if (prop !== 'password') {
+                    expect(String(testUser[prop])).to.equal(String(resUser[prop]));
+                  }
                 });
               });
           });

@@ -1,102 +1,92 @@
 [
     {
-        "site_id": 1,
-        "site_name": "Port Arvilla",
-        "latitude_min": 53.397529,
-        "longitude_min": -1.6480979999999998,
-        "altitude_min": 1,
-        "latitude_max": 54.6566,
-        "longitude_max": -1.496608,
-        "altitude_max": 152
+        "site_name": "Stracketon",
+        "latitude_min": 53.395557,
+        "longitude_min": -1.615881,
+        "altitude_min": 4,
+        "latitude_max": 54.649431,
+        "longitude_max": -1.444054,
+        "altitude_max": 150
     },
     {
-        "site_id": 2,
-        "site_name": "Christineview",
-        "latitude_min": 53.416373,
-        "longitude_min": -1.611224,
-        "altitude_min": 3,
-        "latitude_max": 54.687312,
-        "longitude_max": -1.456125,
-        "altitude_max": 155
-    },
-    {
-        "site_id": 3,
-        "site_name": "New Evestad",
-        "latitude_min": 53.306345,
-        "longitude_min": -1.608172,
-        "altitude_min": 2,
-        "latitude_max": 54.578376,
-        "longitude_max": -1.46294,
-        "altitude_max": 154
-    },
-    {
-        "site_id": 4,
-        "site_name": "Lake Lenore",
-        "latitude_min": 53.286372,
-        "longitude_min": -1.632809,
+        "site_name": "New Alphonso",
+        "latitude_min": 53.227864,
+        "longitude_min": -1.653265,
         "altitude_min": 5,
-        "latitude_max": 54.540428999999996,
-        "longitude_max": -1.403549,
-        "altitude_max": 152
-    },
-    {
-        "site_id": 5,
-        "site_name": "Dietrichfurt",
-        "latitude_min": 53.441207999999996,
-        "longitude_min": -1.60991,
-        "altitude_min": 3,
-        "latitude_max": 54.65394,
-        "longitude_max": -1.419277,
-        "altitude_max": 154
-    },
-    {
-        "site_id": 6,
-        "site_name": "West Gage",
-        "latitude_min": 53.247778999999994,
-        "longitude_min": -1.6522089999999998,
-        "altitude_min": 2,
-        "latitude_max": 54.600007999999995,
-        "longitude_max": -1.4819579999999999,
+        "latitude_max": 54.579403,
+        "longitude_max": -1.44745,
         "altitude_max": 151
     },
     {
-        "site_id": 7,
-        "site_name": "South Tyreekport",
-        "latitude_min": 53.220132,
-        "longitude_min": -1.6744439999999998,
+        "site_name": "Port Mckenna",
+        "latitude_min": 53.351019,
+        "longitude_min": -1.692195,
         "altitude_min": 3,
-        "latitude_max": 54.635317,
-        "longitude_max": -1.4482819999999998,
+        "latitude_max": 54.523084999999995,
+        "longitude_max": -1.464118,
         "altitude_max": 150
     },
     {
-        "site_id": 8,
-        "site_name": "Port Hershel",
-        "latitude_min": 53.265938,
-        "longitude_min": -1.699257,
-        "altitude_min": 5,
-        "latitude_max": 54.655283999999995,
-        "longitude_max": -1.452974,
-        "altitude_max": 152
+        "site_name": "Rodberg",
+        "latitude_min": 53.21086,
+        "longitude_min": -1.615467,
+        "altitude_min": 4,
+        "latitude_max": 54.616915999999996,
+        "longitude_max": -1.4997589999999998,
+        "altitude_max": 151
     },
     {
-        "site_id": 9,
-        "site_name": "Prohaskaside",
-        "latitude_min": 53.237787999999995,
-        "longitude_min": -1.602128,
-        "altitude_min": 1,
-        "latitude_max": 54.638908,
-        "longitude_max": -1.43593,
-        "altitude_max": 152
+        "site_name": "Fletcherview",
+        "latitude_min": 53.474208999999995,
+        "longitude_min": -1.648828,
+        "altitude_min": 4,
+        "latitude_max": 54.696186,
+        "longitude_max": -1.407411,
+        "altitude_max": 154
     },
     {
-        "site_id": 10,
-        "site_name": "Lake Simeonmouth",
-        "latitude_min": 53.292221,
-        "longitude_min": -1.651721,
-        "altitude_min": 1,
-        "latitude_max": 54.645438999999996,
-        "longitude_max": -1.498317,
+        "site_name": "North Jewelville",
+        "latitude_min": 53.393802,
+        "longitude_min": -1.68539,
+        "altitude_min": 2,
+        "latitude_max": 54.584416,
+        "longitude_max": -1.445954,
+        "altitude_max": 154
+    },
+    {
+        "site_name": "West Chanelchester",
+        "latitude_min": 53.212754,
+        "longitude_min": -1.6527509999999999,
+        "altitude_min": 2,
+        "latitude_max": 54.685584999999996,
+        "longitude_max": -1.433743,
+        "altitude_max": 155
+    },
+    {
+        "site_name": "Harveyside",
+        "latitude_min": 53.415476,
+        "longitude_min": -1.688488,
+        "altitude_min": 4,
+        "latitude_max": 54.645466,
+        "longitude_max": -1.450369,
         "altitude_max": 150
+    },
+    {
+        "site_name": "Lake Vance",
+        "latitude_min": 53.496128,
+        "longitude_min": -1.669061,
+        "altitude_min": 4,
+        "latitude_max": 54.675875999999995,
+        "longitude_max": -1.429125,
+        "altitude_max": 151
+    },
+    {
+        "site_name": "Lake Wardville",
+        "latitude_min": 53.380843,
+        "longitude_min": -1.661845,
+        "altitude_min": 2,
+        "latitude_max": 54.643747999999995,
+        "longitude_max": -1.408988,
+        "altitude_max": 154
     }
 ]

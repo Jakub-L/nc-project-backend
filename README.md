@@ -17,12 +17,10 @@ https://site-seeing.herokuapp.com/api/users
 
 #### GET | Select users | Accepted queries:
 
-- username
 - name
 - email
 - sort_by=
   - user_id
-  - username
   - name
   - email
 - order=
@@ -35,7 +33,7 @@ https://site-seeing.herokuapp.com/api/users
 
 #### POST | Add new user | Required body properties:
 
-- username
+- password
 - name
 - email
 - photo_uri
@@ -98,7 +96,6 @@ https://site-seeing.herokuapp.com/api/pins
 
 #### GET | Select pins | Accepted queries:
 
-- username
 - email
 - site_name
 - min_date
