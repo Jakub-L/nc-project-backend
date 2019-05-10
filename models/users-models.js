@@ -51,7 +51,7 @@ function addUser(userReqBody) {
   return connection
     .insert(user)
     .into('users')
-    .returning('name', 'email', 'user_photo', 'user_id');
+    .returning(['name', 'email', 'user_photo', 'user_id']);
 }
 
 function modifyUser(paramObj, updateObj) {

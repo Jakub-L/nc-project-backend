@@ -56,10 +56,8 @@ describe('/', () => {
               .send(testUser)
               .then((res) => {
                 const resUser = res.body.user;
-                Object.keys(testUser).forEach((prop) => {
-                  if (prop !== 'password') {
-                    expect(String(testUser[prop])).to.equal(String(resUser[prop]));
-                  }
+                ['name', 'email', 'user_photo', 'user_id'].forEach((prop) => {
+                  expect(String(testUser[prop])).to.equal(String(resUser[prop]));
                 });
               });
           });
