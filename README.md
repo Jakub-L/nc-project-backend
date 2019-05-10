@@ -33,7 +33,7 @@ https://site-seeing.herokuapp.com/api/users
 
 #### POST | Add new user | Required body properties:
 
-- password_hash
+- password
 - name
 - email
 - photo_uri
