@@ -38,7 +38,6 @@ function getPin(req, res, next) {
 }
 
 function postPin(req, res, next) {
-  console.log(req.body);
   addPin(req.body).then((pins) => {
     if (pins.length === 0) {
       next({ status: 404 });
