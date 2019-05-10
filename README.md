@@ -33,7 +33,11 @@ https://site-seeing.herokuapp.com/api/users
 
 #### POST | Add new user | Required body properties:
 
+<<<<<<< HEAD
 - password_hash
+=======
+- username
+>>>>>>> dev
 - name
 - email
 - photo_uri
@@ -96,6 +100,10 @@ https://site-seeing.herokuapp.com/api/pins
 
 #### GET | Select pins | Accepted queries:
 
+<<<<<<< HEAD
+=======
+- username
+>>>>>>> dev
 - email
 - site_name
 - min_date
