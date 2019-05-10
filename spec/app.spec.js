@@ -42,7 +42,7 @@ describe('/', () => {
           const testUser = {
             password: 'test',
             name: 'Test',
-            email: 'test@email.com',
+            email: 'test3@email.com',
           };
           it('produces status: 201', () => {
             request
@@ -56,8 +56,8 @@ describe('/', () => {
               .send(testUser)
               .then((res) => {
                 const resUser = res.body.user;
-                ['name', 'email', 'user_photo', 'user_id'].forEach((prop) => {
-                  expect(String(testUser[prop])).to.equal(String(resUser[prop]));
+                [('name', 'email')].forEach((prop) => {
+                  expect(testUser[prop]).to.equal(resUser[prop]);
                 });
               });
           });
