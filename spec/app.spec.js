@@ -154,6 +154,7 @@ describe('/', () => {
           const testPin = {
             user_id: 1,
             site_id: 1,
+            timestamp: '2019-05-10T13:45:08.000Z',
             latitude: 53.123456,
             longitude: -1.654321,
             altitude: 44,
@@ -172,9 +173,11 @@ describe('/', () => {
               .send(testPin)
               .then((res) => {
                 const resPin = res.body.pin;
-                Object.keys(testPin).forEach((prop) => {
-                  expect(String(testPin[prop])).to.equal(String(resPin[prop]));
-                });
+                ['timestamp', 'latitude', 'longitude', 'altitude', 'photo_url', 'note'].forEach(
+                  (prop) => {
+                    expect(String(testPin[prop])).to.equal(String(resPin[prop]));
+                  },
+                );
               });
           });
         });
