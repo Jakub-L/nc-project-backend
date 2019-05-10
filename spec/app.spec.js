@@ -87,6 +87,7 @@ describe('/', () => {
               'longitude_max',
               'altitude_max',
               'pin_count',
+              'user_count',
             ];
             expect(sites.every(site => keysRequired.every(key => site.hasOwnProperty(key)))).to.be
               .true;

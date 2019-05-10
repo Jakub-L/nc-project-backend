@@ -36,7 +36,8 @@ function selectAllSites(queryObj) {
       'sites.longitude_max AS longitude_max',
       'sites.altitude_max AS altitude_max',
     )
-    .count('pins.pin_id AS pin_count', 'users.user_id AS user_count')
+    .count('pins.pin_id AS pin_count')
+    .count('users.user_id AS user_count')
     .from('sites')
     .leftJoin('pins', 'sites.site_id', '=', 'pins.site_id')
     .leftJoin('users', 'pins.user_id', '=', 'users.user_id')
@@ -62,7 +63,8 @@ function selectSite(paramObj) {
       'sites.longitude_max AS longitude_max',
       'sites.altitude_max AS altitude_max',
     )
-    .count('pins.pin_id AS pin_count', 'users.user_id AS user_count')
+    .count('pins.pin_id AS pin_count')
+    .count('users.user_id AS user_count')
     .from('sites')
     .leftJoin('pins', 'sites.site_id', '=', 'pins.site_id')
     .leftJoin('users', 'pins.user_id', '=', 'users.user_id')
