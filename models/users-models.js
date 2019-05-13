@@ -14,7 +14,7 @@ function selectAllUsers(queryObj) {
   if (queryObj.hasOwnProperty('email')) {
     const sanitizer = /(<|>|"|'|AND|OR|NOT)/i;
     if (!sanitizer.test(queryObj.email)) {
-      rawCondition = `LOWER(email) = ${queryObj.email}`;
+      rawCondition = `LOWER(email) = ${queryObj.email.toLowerCase()}`;
       delete queryObj.email;
     }
   }
