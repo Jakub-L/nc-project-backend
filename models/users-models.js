@@ -10,15 +10,6 @@ function selectAllUsers(queryObj) {
       delete queryObj[sortProp];
     }
   });
-  let rawCondition = '1 = 1';
-  if (queryObj.hasOwnProperty('email')) {
-    const sanitizer = /(<|>|"|'|AND|OR|NOT)/i;
-    if (!sanitizer.test(queryObj.email)) {
-      rawCondition = `LOWER(email) = ${queryObj.email.toLowerCase()}`;
-      delete queryObj.email;
-    }
-  }
-
   return connection
     .select(
       'users.user_id AS user_id',
@@ -28,7 +19,6 @@ function selectAllUsers(queryObj) {
     )
     .from('users')
     .where(queryObj)
-    .whereRaw(rawCondition)
     .orderBy(sortObj.sort_by, sortObj.order);
 }
 
