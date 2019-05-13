@@ -16,6 +16,7 @@ function selectAllUsers(queryObj) {
     if (!sanitizer.test(queryObj.email)) {
       rawCondition = `LOWER(email) = ${queryObj.email}`;
       delete queryObj.email;
+    }
   }
 
   return connection

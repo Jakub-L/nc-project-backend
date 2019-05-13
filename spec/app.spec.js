@@ -64,25 +64,15 @@ describe('/', () => {
         });
       });
       describe('PARAMETRIC BEHAVIOUR', () => {
-        describe('PATCH', () => {
-          const patchUser = {
-            email: 'changedaddress@email.com',
-          };
-          it('produces status: 201', () => {
-            request
-              .post('/api/users/1')
-              .send(patchUser)
-              .expect(202);
-          });
-          it('returns posted user containing sent information', () => {
-            request
-              .post('/api/users/1')
-              .send(patchUser)
-              .then((res) => {
-                const resUser = res.body.user;
-                expect(resUser.email).to.equal(patchUser.email);
-              });
-          });
+        describe('GET', () => {
+          it('produces status: 200', () => request.get('/api/users/1').expect(200));
+          it('returns an object containing a user object with the specified user_id', () => request.get('/api/users/1').then(({ body: { user } }) => {
+            expect(user.user_id).to.equal(1);
+          }));
+          it('provides each user object with associated non-sensitive data', () => request.get('/api/users/1').then(({ body: { user } }) => {
+            const keysRequired = ['user_id', 'name', 'email', 'user_photo'];
+            expect(keysRequired.every(key => user.hasOwnProperty(key))).to.be.true;
+          }));
         });
       });
     });
@@ -140,6 +130,29 @@ describe('/', () => {
                 });
               });
           });
+        });
+      });
+      describe('PARAMETRIC BEHAVIOUR', () => {
+        describe('GET', () => {
+          it('produces status: 200', () => request.get('/api/sites/1').expect(200));
+          it('returns an object containing a site object with the specified site_id', () => request.get('/api/sites/1').then(({ body: { site } }) => {
+            expect(site.site_id).to.equal(1);
+          }));
+          it('provides each site object with associated non-sensitive data', () => request.get('/api/sites/1').then(({ body: { site } }) => {
+            const keysRequired = [
+              'site_id',
+              'site_name',
+              'latitude_min',
+              'longitude_min',
+              'altitude_min',
+              'latitude_max',
+              'longitude_max',
+              'altitude_max',
+              'pin_count',
+              'user_count',
+            ];
+            expect(keysRequired.every(key => site.hasOwnProperty(key))).to.be.true;
+          }));
         });
       });
     });
@@ -201,6 +214,29 @@ describe('/', () => {
                 );
               });
           });
+        });
+      });
+      describe('PARAMETRIC BEHAVIOUR', () => {
+        describe('GET', () => {
+          it('produces status: 200', () => request.get('/api/pins/1').expect(200));
+          it('returns an object containing a pin object with the specified pin_id', () => request.get('/api/pins/1').then(({ body: { pin } }) => {
+            expect(pin.pin_id).to.equal(1);
+          }));
+          it('provides each pin object with associated non-sensitive data', () => request.get('/api/pins/1').then(({ body: { pin } }) => {
+            const keysRequired = [
+              'pin_id',
+              'photo_url',
+              'note',
+              'timestamp',
+              'latitude',
+              'longitude',
+              'altitude',
+              'creator',
+              'email',
+              'site_name',
+            ];
+            expect(keysRequired.every(key => pin.hasOwnProperty(key))).to.be.true;
+          }));
         });
       });
     });
