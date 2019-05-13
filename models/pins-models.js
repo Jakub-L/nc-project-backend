@@ -57,7 +57,7 @@ function selectPin(paramObj) {
   return connection
     .select(
       'pins.pin_id AS pin_id',
-      'pins.photo_url AS url',
+      'pins.photo_url AS photo_url',
       'pins.note AS note',
       'pins.timestamp AS timestamp',
       'pins.latitude AS latitude',

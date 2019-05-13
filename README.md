@@ -96,6 +96,10 @@ https://site-seeing.herokuapp.com/api/pins
 
 #### GET | Select pins | Accepted queries:
 
+<<<<<<< HEAD
+=======
+- username
+>>>>>>> dev
 - email
 - site_name
 - min_date
