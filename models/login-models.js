@@ -6,7 +6,7 @@ function checkPassword(email, password) {
   return (
     connection('users')
       // .where({ email })
-      .whereRaw('LOWER(email) = ?', email.toLowerCase())
+      .whereRaw('LOWER(email) = ?', [email.toLowerCase()])
       .then(([user]) => {
         if (!user) return Promise.reject();
         const { password_hash, ...returnUser } = user;
