@@ -5,7 +5,7 @@ const fs = require('fs');
 const pinsArray = [];
 const usersArray = [];
 const sitesArray = [];
-const pinsCount = 100;
+const pinsCount = 1000;
 const usersCount = 30;
 const sitesCount = 10;
 
@@ -14,8 +14,8 @@ for (let i = 1; i <= pinsCount; i += 1) {
     user_id: faker.random.number({ min: 1, max: usersCount }),
     site_id: faker.random.number({ min: 1, max: sitesCount }),
     timestamp: faker.date.recent().toISOString(),
-    latitude: faker.random.number({ min: 53.5, max: 54.5, precision: 0.000001 }),
-    longitude: faker.random.number({ min: -1.6, max: -1.5, precision: 0.000001 }),
+    latitude: faker.random.number({ min: 53.798131, max: 53.791537, precision: 0.000001 }),
+    longitude: faker.random.number({ min: -1.5394, max: -1.554673, precision: 0.000001 }),
     altitude: faker.random.number({ min: 5, max: 150 }),
     photo_url: Math.random() > 0.9 ? '' : faker.image.imageUrl(),
     note: Math.random() > 0.9 ? '' : faker.lorem.words(faker.random.number({ min: 10, max: 150 })),

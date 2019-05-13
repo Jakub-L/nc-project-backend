@@ -42,7 +42,7 @@ describe('/', () => {
           const testUser = {
             password: 'test',
             name: 'Test',
-            email: 'test@email.com',
+            email: 'test3@email.com',
           };
           it('produces status: 201', () => {
             request
@@ -56,13 +56,23 @@ describe('/', () => {
               .send(testUser)
               .then((res) => {
                 const resUser = res.body.user;
-                Object.keys(testUser).forEach((prop) => {
-                  if (prop !== 'password') {
-                    expect(String(testUser[prop])).to.equal(String(resUser[prop]));
-                  }
+                [('name', 'email')].forEach((prop) => {
+                  expect(testUser[prop]).to.equal(resUser[prop]);
                 });
               });
           });
+        });
+      });
+      describe('PARAMETRIC BEHAVIOUR', () => {
+        describe('GET', () => {
+          it('produces status: 200', () => request.get('/api/users/1').expect(200));
+          it('returns an object containing a user object with the specified user_id', () => request.get('/api/users/1').then(({ body: { user } }) => {
+            expect(user.user_id).to.equal(1);
+          }));
+          it('provides each user object with associated non-sensitive data', () => request.get('/api/users/1').then(({ body: { user } }) => {
+            const keysRequired = ['user_id', 'name', 'email', 'user_photo'];
+            expect(keysRequired.every(key => user.hasOwnProperty(key))).to.be.true;
+          }));
         });
       });
     });
@@ -87,6 +97,7 @@ describe('/', () => {
               'longitude_max',
               'altitude_max',
               'pin_count',
+              'user_count',
             ];
             expect(sites.every(site => keysRequired.every(key => site.hasOwnProperty(key)))).to.be
               .true;
@@ -119,6 +130,29 @@ describe('/', () => {
                 });
               });
           });
+        });
+      });
+      describe('PARAMETRIC BEHAVIOUR', () => {
+        describe('GET', () => {
+          it('produces status: 200', () => request.get('/api/sites/1').expect(200));
+          it('returns an object containing a site object with the specified site_id', () => request.get('/api/sites/1').then(({ body: { site } }) => {
+            expect(site.site_id).to.equal(1);
+          }));
+          it('provides each site object with associated non-sensitive data', () => request.get('/api/sites/1').then(({ body: { site } }) => {
+            const keysRequired = [
+              'site_id',
+              'site_name',
+              'latitude_min',
+              'longitude_min',
+              'altitude_min',
+              'latitude_max',
+              'longitude_max',
+              'altitude_max',
+              'pin_count',
+              'user_count',
+            ];
+            expect(keysRequired.every(key => site.hasOwnProperty(key))).to.be.true;
+          }));
         });
       });
     });
@@ -154,6 +188,7 @@ describe('/', () => {
           const testPin = {
             user_id: 1,
             site_id: 1,
+            timestamp: '2019-05-10T13:45:08.000Z',
             latitude: 53.123456,
             longitude: -1.654321,
             altitude: 44,
@@ -172,11 +207,36 @@ describe('/', () => {
               .send(testPin)
               .then((res) => {
                 const resPin = res.body.pin;
-                Object.keys(testPin).forEach((prop) => {
-                  expect(String(testPin[prop])).to.equal(String(resPin[prop]));
-                });
+                ['timestamp', 'latitude', 'longitude', 'altitude', 'photo_url', 'note'].forEach(
+                  (prop) => {
+                    expect(String(testPin[prop])).to.equal(String(resPin[prop]));
+                  },
+                );
               });
           });
+        });
+      });
+      describe('PARAMETRIC BEHAVIOUR', () => {
+        describe('GET', () => {
+          it('produces status: 200', () => request.get('/api/pins/1').expect(200));
+          it('returns an object containing a pin object with the specified pin_id', () => request.get('/api/pins/1').then(({ body: { pin } }) => {
+            expect(pin.pin_id).to.equal(1);
+          }));
+          it('provides each pin object with associated non-sensitive data', () => request.get('/api/pins/1').then(({ body: { pin } }) => {
+            const keysRequired = [
+              'pin_id',
+              'photo_url',
+              'note',
+              'timestamp',
+              'latitude',
+              'longitude',
+              'altitude',
+              'creator',
+              'email',
+              'site_name',
+            ];
+            expect(keysRequired.every(key => pin.hasOwnProperty(key))).to.be.true;
+          }));
         });
       });
     });

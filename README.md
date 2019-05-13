@@ -2,9 +2,6 @@
 
 Backend for the NorthCoders final project
 
-Note (BC 03/05/2019) - Available photo properties from camera:
-height, width, type, fileName, path, longitude, latitude, filesize, uri, isVertical, originalRotation, timestamp
-
 # API
 
 https://site-seeing.herokuapp.com/api
@@ -97,9 +94,12 @@ https://site-seeing.herokuapp.com/api/pins
 #### GET | Select pins | Accepted queries:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - username
 >>>>>>> dev
+=======
+>>>>>>> 618ee13c6288c857713ac6efca03b107a415de12
 - email
 - site_name
 - min_date

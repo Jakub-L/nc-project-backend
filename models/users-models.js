@@ -1,3 +1,4 @@
+const bcrypt = require('bcrypt');
 const connection = require('../db/connection');
 
 function selectAllUsers(queryObj) {
@@ -9,7 +10,6 @@ function selectAllUsers(queryObj) {
       delete queryObj[sortProp];
     }
   });
-
   return connection
     .select(
       'users.user_id AS user_id',
@@ -50,7 +50,7 @@ function addUser(userReqBody) {
   return connection
     .insert(user)
     .into('users')
-    .returning('name', 'email', 'user_photo', 'user_id');
+    .returning(['name', 'email', 'user_photo', 'user_id']);
 }
 
 function modifyUser(paramObj, updateObj) {
