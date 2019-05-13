@@ -1,92 +1,92 @@
 [
     {
-        "site_name": "North Stantonmouth",
-        "latitude_min": 53.461588,
-        "longitude_min": -1.6365969999999999,
-        "altitude_min": 1,
-        "latitude_max": 54.629112,
-        "longitude_max": -1.449916,
-        "altitude_max": 154
-    },
-    {
-        "site_name": "Ezratown",
-        "latitude_min": 53.314569999999996,
-        "longitude_min": -1.6924569999999999,
+        "site_name": "Port Claude",
+        "latitude_min": 53.304393,
+        "longitude_min": -1.644407,
         "altitude_min": 3,
-        "latitude_max": 54.610037999999996,
-        "longitude_max": -1.460532,
-        "altitude_max": 150
-    },
-    {
-        "site_name": "South Glen",
-        "latitude_min": 53.388726999999996,
-        "longitude_min": -1.624218,
-        "altitude_min": 2,
-        "latitude_max": 54.592016,
-        "longitude_max": -1.499897,
-        "altitude_max": 152
-    },
-    {
-        "site_name": "North Precious",
-        "latitude_min": 53.343424,
-        "longitude_min": -1.610986,
-        "altitude_min": 3,
-        "latitude_max": 54.674355,
-        "longitude_max": -1.47428,
-        "altitude_max": 154
-    },
-    {
-        "site_name": "East Lenny",
-        "latitude_min": 53.381674,
-        "longitude_min": -1.600446,
-        "altitude_min": 1,
-        "latitude_max": 54.536376,
-        "longitude_max": -1.4296769999999999,
-        "altitude_max": 151
-    },
-    {
-        "site_name": "Roweview",
-        "latitude_min": 53.245334,
-        "longitude_min": -1.6331849999999999,
-        "altitude_min": 2,
-        "latitude_max": 54.587356,
-        "longitude_max": -1.484716,
-        "altitude_max": 155
-    },
-    {
-        "site_name": "Johanborough",
-        "latitude_min": 53.317394,
-        "longitude_min": -1.6425029999999998,
-        "altitude_min": 5,
-        "latitude_max": 54.558963999999996,
-        "longitude_max": -1.403114,
-        "altitude_max": 154
-    },
-    {
-        "site_name": "East Jayme",
-        "latitude_min": 53.229524999999995,
-        "longitude_min": -1.694076,
-        "altitude_min": 3,
-        "latitude_max": 54.512288999999996,
-        "longitude_max": -1.4215339999999999,
+        "latitude_max": 54.562523,
+        "longitude_max": -1.47698,
         "altitude_max": 153
     },
     {
-        "site_name": "Heavenfort",
-        "latitude_min": 53.345347999999994,
-        "longitude_min": -1.612987,
-        "altitude_min": 3,
-        "latitude_max": 54.60579,
-        "longitude_max": -1.407549,
+        "site_name": "Lake Norwood",
+        "latitude_min": 53.273813999999994,
+        "longitude_min": -1.619595,
+        "altitude_min": 5,
+        "latitude_max": 54.549409999999995,
+        "longitude_max": -1.4023869999999998,
+        "altitude_max": 151
+    },
+    {
+        "site_name": "New Omer",
+        "latitude_min": 53.355951999999995,
+        "longitude_min": -1.6216309999999998,
+        "altitude_min": 0,
+        "latitude_max": 54.556293,
+        "longitude_max": -1.481442,
         "altitude_max": 155
     },
     {
-        "site_name": "Brownhaven",
-        "latitude_min": 53.444987999999995,
-        "longitude_min": -1.6563979999999998,
+        "site_name": "South Ellsworthside",
+        "latitude_min": 53.468014999999994,
+        "longitude_min": -1.6887349999999999,
         "altitude_min": 5,
-        "latitude_max": 54.629858999999996,
-        "longitude_max": -1.423397,
+        "latitude_max": 54.507658,
+        "longitude_max": -1.491653,
+        "altitude_max": 152
+    },
+    {
+        "site_name": "New Jackietown",
+        "latitude_min": 53.257805,
+        "longitude_min": -1.690142,
+        "altitude_min": 4,
+        "latitude_max": 54.684787,
+        "longitude_max": -1.4601,
+        "altitude_max": 151
+    },
+    {
+        "site_name": "Marlenbury",
+        "latitude_min": 53.338963,
+        "longitude_min": -1.6479469999999998,
+        "altitude_min": 5,
+        "latitude_max": 54.653141999999995,
+        "longitude_max": -1.488284,
+        "altitude_max": 150
+    },
+    {
+        "site_name": "Magnusland",
+        "latitude_min": 53.276629,
+        "longitude_min": -1.6260869999999998,
+        "altitude_min": 1,
+        "latitude_max": 54.516745,
+        "longitude_max": -1.478753,
+        "altitude_max": 150
+    },
+    {
+        "site_name": "North Roberto",
+        "latitude_min": 53.371963,
+        "longitude_min": -1.6592959999999999,
+        "altitude_min": 5,
+        "latitude_max": 54.582845999999996,
+        "longitude_max": -1.448812,
+        "altitude_max": 150
+    },
+    {
+        "site_name": "East Emmanuelleview",
+        "latitude_min": 53.425771,
+        "longitude_min": -1.600137,
+        "altitude_min": 3,
+        "latitude_max": 54.698530999999996,
+        "longitude_max": -1.465582,
+        "altitude_max": 153
+    },
+    {
+        "site_name": "Erdmanton",
+        "latitude_min": 53.208169,
+        "longitude_min": -1.614973,
+        "altitude_min": 5,
+        "latitude_max": 54.50825,
+        "longitude_max": -1.4489349999999999,
         "altitude_max": 152
     }
 ]
