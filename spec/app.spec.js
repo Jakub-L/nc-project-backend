@@ -63,6 +63,28 @@ describe('/', () => {
           });
         });
       });
+      describe('PARAMETRIC BEHAVIOUR', () => {
+        describe('PATCH', () => {
+          const patchUser = {
+            email: 'changedaddress@email.com',
+          };
+          it('produces status: 201', () => {
+            request
+              .post('/api/users/1')
+              .send(patchUser)
+              .expect(202);
+          });
+          it('returns posted user containing sent information', () => {
+            request
+              .post('/api/users/1')
+              .send(patchUser)
+              .then((res) => {
+                const resUser = res.body.user;
+                expect(resUser.email).to.equal(patchUser.email);
+              });
+          });
+        });
+      });
     });
     describe('/sites', () => {
       describe('DEFAULT BEHAVIOUR', () => {

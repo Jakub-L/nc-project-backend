@@ -1,92 +1,92 @@
 [
     {
-        "site_name": "Stracketon",
-        "latitude_min": 53.395557,
-        "longitude_min": -1.615881,
-        "altitude_min": 4,
-        "latitude_max": 54.649431,
-        "longitude_max": -1.444054,
-        "altitude_max": 150
+        "site_name": "North Stantonmouth",
+        "latitude_min": 53.461588,
+        "longitude_min": -1.6365969999999999,
+        "altitude_min": 1,
+        "latitude_max": 54.629112,
+        "longitude_max": -1.449916,
+        "altitude_max": 154
     },
     {
-        "site_name": "New Alphonso",
-        "latitude_min": 53.227864,
-        "longitude_min": -1.653265,
-        "altitude_min": 5,
-        "latitude_max": 54.579403,
-        "longitude_max": -1.44745,
-        "altitude_max": 151
-    },
-    {
-        "site_name": "Port Mckenna",
-        "latitude_min": 53.351019,
-        "longitude_min": -1.692195,
+        "site_name": "Ezratown",
+        "latitude_min": 53.314569999999996,
+        "longitude_min": -1.6924569999999999,
         "altitude_min": 3,
-        "latitude_max": 54.523084999999995,
-        "longitude_max": -1.464118,
+        "latitude_max": 54.610037999999996,
+        "longitude_max": -1.460532,
         "altitude_max": 150
     },
     {
-        "site_name": "Rodberg",
-        "latitude_min": 53.21086,
-        "longitude_min": -1.615467,
-        "altitude_min": 4,
-        "latitude_max": 54.616915999999996,
-        "longitude_max": -1.4997589999999998,
+        "site_name": "South Glen",
+        "latitude_min": 53.388726999999996,
+        "longitude_min": -1.624218,
+        "altitude_min": 2,
+        "latitude_max": 54.592016,
+        "longitude_max": -1.499897,
+        "altitude_max": 152
+    },
+    {
+        "site_name": "North Precious",
+        "latitude_min": 53.343424,
+        "longitude_min": -1.610986,
+        "altitude_min": 3,
+        "latitude_max": 54.674355,
+        "longitude_max": -1.47428,
+        "altitude_max": 154
+    },
+    {
+        "site_name": "East Lenny",
+        "latitude_min": 53.381674,
+        "longitude_min": -1.600446,
+        "altitude_min": 1,
+        "latitude_max": 54.536376,
+        "longitude_max": -1.4296769999999999,
         "altitude_max": 151
     },
     {
-        "site_name": "Fletcherview",
-        "latitude_min": 53.474208999999995,
-        "longitude_min": -1.648828,
-        "altitude_min": 4,
-        "latitude_max": 54.696186,
-        "longitude_max": -1.407411,
-        "altitude_max": 154
-    },
-    {
-        "site_name": "North Jewelville",
-        "latitude_min": 53.393802,
-        "longitude_min": -1.68539,
+        "site_name": "Roweview",
+        "latitude_min": 53.245334,
+        "longitude_min": -1.6331849999999999,
         "altitude_min": 2,
-        "latitude_max": 54.584416,
-        "longitude_max": -1.445954,
-        "altitude_max": 154
-    },
-    {
-        "site_name": "West Chanelchester",
-        "latitude_min": 53.212754,
-        "longitude_min": -1.6527509999999999,
-        "altitude_min": 2,
-        "latitude_max": 54.685584999999996,
-        "longitude_max": -1.433743,
+        "latitude_max": 54.587356,
+        "longitude_max": -1.484716,
         "altitude_max": 155
     },
     {
-        "site_name": "Harveyside",
-        "latitude_min": 53.415476,
-        "longitude_min": -1.688488,
-        "altitude_min": 4,
-        "latitude_max": 54.645466,
-        "longitude_max": -1.450369,
-        "altitude_max": 150
-    },
-    {
-        "site_name": "Lake Vance",
-        "latitude_min": 53.496128,
-        "longitude_min": -1.669061,
-        "altitude_min": 4,
-        "latitude_max": 54.675875999999995,
-        "longitude_max": -1.429125,
-        "altitude_max": 151
-    },
-    {
-        "site_name": "Lake Wardville",
-        "latitude_min": 53.380843,
-        "longitude_min": -1.661845,
-        "altitude_min": 2,
-        "latitude_max": 54.643747999999995,
-        "longitude_max": -1.408988,
+        "site_name": "Johanborough",
+        "latitude_min": 53.317394,
+        "longitude_min": -1.6425029999999998,
+        "altitude_min": 5,
+        "latitude_max": 54.558963999999996,
+        "longitude_max": -1.403114,
         "altitude_max": 154
+    },
+    {
+        "site_name": "East Jayme",
+        "latitude_min": 53.229524999999995,
+        "longitude_min": -1.694076,
+        "altitude_min": 3,
+        "latitude_max": 54.512288999999996,
+        "longitude_max": -1.4215339999999999,
+        "altitude_max": 153
+    },
+    {
+        "site_name": "Heavenfort",
+        "latitude_min": 53.345347999999994,
+        "longitude_min": -1.612987,
+        "altitude_min": 3,
+        "latitude_max": 54.60579,
+        "longitude_max": -1.407549,
+        "altitude_max": 155
+    },
+    {
+        "site_name": "Brownhaven",
+        "latitude_min": 53.444987999999995,
+        "longitude_min": -1.6563979999999998,
+        "altitude_min": 5,
+        "latitude_max": 54.629858999999996,
+        "longitude_max": -1.423397,
+        "altitude_max": 152
     }
 ]
