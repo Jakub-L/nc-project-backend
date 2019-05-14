@@ -31,4 +31,11 @@ module.exports = [
     user_photo:
       'https://media.licdn.com/dms/image/C4E03AQFbZB-AwzQf5g/profile-displayphoto-shrink_800_800/0?e=1563408000&v=beta&t=By73QL-7JWDzYy8aMyAeENgyyR9HzGkM-KiSiE4OmTk',
   },
+  {
+    // user_id: 5,
+    name: 'Ove',
+    email: 'ove@site-seeing.com',
+    password_hash: '$2b$10$DRQ9S3h/Ps41jmHtznAUe.CxSS0bMuzaKQzJun5EAcx6aPfOSxxWS',
+    user_photo: 'https://upload.wikimedia.org/wikipedia/en/a/ac/Ove_Arup.jpg',
+  },
 ];

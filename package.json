@@ -17,7 +17,7 @@
     "seed:prod": "NODE_ENV=production DATABASE_URL=$(heroku config:get DATABASE_URL) knex seed:run",
     "migrate:latest:prod": "NODE_ENV=production DATABASE_URL=$(heroku config:get DATABASE_URL) knex migrate:latest",
     "migrate:rollback:prod": "NODE_ENV=production DATABASE_URL=$(heroku config:get DATABASE_URL) knex migrate:rollback",
-    "heroku-rebuild": "npm run setup-dbs && npm run migrate:latest:prod && npm run seed:prod && git push heroku update-pin-get:master",
+    "heroku-rebuild": "npm run setup-dbs && npm run migrate:latest:prod && npm run seed:prod && git push heroku test-data:master",
     "generate-dev-data": "node utils/generate-dev-data.js"
   },
   "repository": {
