@@ -65,6 +65,7 @@ function selectPin(paramObj) {
       'pins.altitude AS altitude',
       'users.name AS creator',
       'users.email AS email',
+      'users.user_photo AS user_photo',
       'sites.site_name AS site_name',
     )
     .from('pins')
