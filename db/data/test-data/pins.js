@@ -19,8 +19,7 @@ module.exports = [
     latitude: 53.793475,
     longitude: -1.532473,
     altitude: 25,
-    photo_url:
-      'https://ichef.bbci.co.uk/news/660/cpsprodpb/160F8/production/_104106309_sellafield.jpg',
+    photo_url: 'https://www.honiron.com/wp-content/uploads/2017/05/DistillationColumn-1000x480.jpg',
     note: 'test pin 2',
   },
   {
@@ -44,6 +43,17 @@ module.exports = [
     longitude: -1.532473,
     altitude: 25,
     photo_url: 'https://images.wisegeek.com/blue-pipe-with-blind-flange.jpg',
+    note: 'test pin 4',
+  },
+  {
+    // pin_id: 5,
+    user_id: 5,
+    site_id: 1,
+    timestamp: '2019-05-02T10:44:43Z',
+    latitude: 53.7989525,
+    longitude: -1.549964,
+    altitude: 25,
+    photo_url: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Sydney_Opera_House_Sails.jpg',
     note: 'test pin 4',
   },
 ];
