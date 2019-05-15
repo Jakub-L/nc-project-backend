@@ -66,7 +66,6 @@ function deletePin(req, res, next) {
     if (pins.length === 0) {
       next({ status: 404 });
     } else {
-      const [pin] = pins;
       res.status(204).json({});
     }
   });

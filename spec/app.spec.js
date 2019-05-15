@@ -30,7 +30,7 @@ describe('/', () => {
             expect(users).to.be.an('array');
           }));
           it('has an object for each user within the array', () => request.get('/api/users').then(({ body: { users } }) => {
-            expect(users).to.have.lengthOf(4);
+            expect(users).to.have.lengthOf(5);
           }));
           it('provides each user object with associated keys', () => request.get('/api/users').then(({ body: { users } }) => {
             const keysRequired = ['user_id', 'name', 'email', 'user_photo'];
@@ -74,6 +74,12 @@ describe('/', () => {
             expect(keysRequired.every(key => user.hasOwnProperty(key))).to.be.true;
           }));
         });
+        describe('DELETE', () => {
+          it('produces status: 204', () => request.delete('/api/users/1').expect(204));
+          it('responds with no content', () => request.delete('/api/users/1').then(({ body }) => {
+            expect(body).to.eql({});
+          }));
+        });
       });
     });
     describe('/sites', () => {
@@ -84,7 +90,7 @@ describe('/', () => {
             expect(sites).to.be.an('array');
           }));
           it('has an object for each site within the array', () => request.get('/api/sites').then(({ body: { sites } }) => {
-            expect(sites).to.have.lengthOf(4);
+            expect(sites).to.have.lengthOf(1);
           }));
           it('provides each site object with associated keys', () => request.get('/api/sites').then(({ body: { sites } }) => {
             const keysRequired = [
@@ -153,6 +159,12 @@ describe('/', () => {
             ];
             expect(keysRequired.every(key => site.hasOwnProperty(key))).to.be.true;
           }));
+          describe('DELETE', () => {
+            it('produces status: 204', () => request.delete('/api/sites/1').expect(204));
+            it('responds with no content', () => request.delete('/api/sites/1').then(({ body }) => {
+              expect(body).to.eql({});
+            }));
+          });
         });
       });
     });
@@ -164,7 +176,7 @@ describe('/', () => {
             expect(pins).to.be.an('array');
           }));
           it('has an object for each pin within the array', () => request.get('/api/pins').then(({ body: { pins } }) => {
-            expect(pins).to.have.lengthOf(4);
+            expect(pins).to.have.lengthOf(5);
           }));
           it('provides each pin object with associated keys', () => request.get('/api/pins').then(({ body: { pins } }) => {
             const keysRequired = [
@@ -236,6 +248,12 @@ describe('/', () => {
               'site_name',
             ];
             expect(keysRequired.every(key => pin.hasOwnProperty(key))).to.be.true;
+          }));
+        });
+        describe('DELETE', () => {
+          it('produces status: 204', () => request.delete('/api/pins/1').expect(204));
+          it('responds with no content', () => request.delete('/api/pins/1').then(({ body }) => {
+            expect(body).to.eql({});
           }));
         });
       });

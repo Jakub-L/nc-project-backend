@@ -57,7 +57,6 @@ function deleteUser(req, res, next) {
     if (users.length === 0) {
       next({ status: 404 });
     } else {
-      const [user] = users;
       res.status(204).json({});
     }
   });
