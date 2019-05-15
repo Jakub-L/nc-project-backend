@@ -67,7 +67,6 @@ function deleteSite(req, res, next) {
     if (sites.length === 0) {
       next({ status: 404 });
     } else {
-      const [site] = sites;
       res.status(204).json({});
     }
   });
